@@ -1,34 +1,24 @@
----
-layout: default
-title: Michele Siddi - IT Expert, Software Engineer, Cybersecurity Specialist
-description: Portfolio professionale e blog su tecnologia, cybersecurity e innovazione. Sviluppo software, sicurezza informatica, cloud e strategie digitali.
----
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michele Siddi — IT Expert, Software Engineer, Cybersecurity Specialist</title>
-    
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Portfolio professionale e blog su tecnologia, cybersecurity e innovazione. Sviluppo software, sicurezza informatica, cloud e strategie digitali.">
     <meta name="keywords" content="Michele Siddi, IT Expert, Software Engineer, Cybersecurity, Cloud, AI, Portfolio, Blog">
     <meta name="author" content="Michele Siddi">
     <link rel="canonical" href="https://mictech23.github.io/michelesiddi/">
-    
     <!-- Open Graph -->
     <meta property="og:title" content="Michele Siddi - IT Expert & Cybersecurity Specialist">
     <meta property="og:description" content="Portfolio professionale e blog su tecnologia, cybersecurity e innovazione">
     <meta property="og:image" content="https://mictech23.github.io/michelesiddi/foto-profilo.jpg">
     <meta property="og:url" content="https://mictech23.github.io/michelesiddi/">
     <meta property="og:type" content="website">
-    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Michele Siddi - IT Expert & Cybersecurity Specialist">
     <meta name="twitter:description" content="Portfolio professionale e blog su tecnologia, cybersecurity e innovazione">
     <meta name="twitter:image" content="https://mictech23.github.io/michelesiddi/foto-profilo.jpg">
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -72,10 +62,10 @@ description: Portfolio professionale e blog su tecnologia, cybersecurity e innov
                 <div class="about-text" id="about-text">
                     <h2 class="section-title" id="about-title">Chi sono</h2>
                     <p id="about-desc">
-                    Questo è il mio spazio dedicato all’informatica e all’innovazione.
-                    Qui condivido articoli, guide e news sul mondo della tecnologia, con un focus speciale su Intelligenza Artificiale, cybersecurity e software engineering.
-                    Un punto d’incontro per chi vuole capire, imparare e restare aggiornato.
-                    Offro anche consulenze personalizzate e supporto tecnico per aziende e professionisti che vogliono evolvere nel digitale.
+                        Questo è il mio spazio dedicato all’informatica e all’innovazione.<br>
+                        Qui condivido articoli, guide e news sul mondo della tecnologia, con un focus speciale su Intelligenza Artificiale.<br>
+                        Un punto d’incontro per chi vuole capire, imparare e restare aggiornato.<br>
+                        Offro anche consulenze personalizzate e supporto tecnico per privati, aziende e professionisti.<br>
                         <span style="font-weight:600;">Mi occupo di sviluppo software, sicurezza, cloud e strategie digitali.</span>
                     </p>
                     <div class="about-badges" id="about-badges">
@@ -200,41 +190,69 @@ description: Portfolio professionale e blog su tecnologia, cybersecurity e innov
                 Scopri articoli su tecnologia, cybersecurity, AI e innovazione
             </p>
             <div class="articles-list" id="articles-list">
-                <a href="articles/cybersecurity-2025.html" class="article-card-link">
+                <a href="articles/ai-agent.html" class="article-card-link">
                     <div class="article-card">
-                        <img class="article-thumb" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="AI Agent">
                         <div class="article-content">
-                            <div class="article-title">Come la Cybersecurity sta cambiando il mondo aziendale <i class="fa-solid fa-arrow-right"></i></div>
-                            <div class="article-meta">7 ottobre 2025</div>
-                            <div class="article-desc">Minacce moderne e strategie per proteggere la tua azienda.</div>
+                            <div class="article-title">Cosa sono gli AI Agent e perché rivoluzionano il lavoro <i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="article-meta">10 ottobre 2025</div>
+                            <div class="article-desc">Scopri come gli agenti AI automatizzano processi e decisioni nelle aziende moderne.</div>
                         </div>
                     </div>
                 </a>
-                <a href="articles/intelligenza-artificiale.html" class="article-card-link">
+                <a href="articles/llm.html" class="article-card-link">
                     <div class="article-card">
-                    <img class="article-thumb" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="AI">
-                    <div class="article-content">
-                        <div class="article-title">Intelligenza Artificiale: opportunità e rischi <i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="article-meta">20 ottobre 2025</div>
-                        <div class="article-desc">Vantaggi e sfide dell’AI nella digitalizzazione delle imprese.</div>
-                    </div>
-                </div>
-                </a>
-                {% for post in site.posts offset:2 limit:2 %}
-                <a href="{{ post.url | relative_url }}" class="article-card-link">
-                    <div class="article-card">
-                        <img class="article-thumb" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="LLM">
                         <div class="article-content">
-                            <div class="article-title">{{ post.title }} <i class="fa-solid fa-arrow-right"></i></div>
-                            <div class="article-meta">{{ post.date | date: "%d %B %Y" }}</div>
-                            <div class="article-desc">{{ post.description }}</div>
+                            <div class="article-title">LLM: Cos’è un Large Language Model? <i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="article-meta">8 ottobre 2025</div>
+                            <div class="article-desc">Introduzione ai modelli linguistici avanzati che stanno cambiando la comunicazione digitale.</div>
                         </div>
                     </div>
                 </a>
-                {% endfor %}
+                <a href="articles/cybersecurity-basics.html" class="article-card-link">
+                    <div class="article-card">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity">
+                        <div class="article-content">
+                            <div class="article-title">Cybersecurity: i concetti base <i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="article-meta">5 ottobre 2025</div>
+                            <div class="article-desc">Le fondamenta della sicurezza informatica spiegate in modo semplice per tutti.</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="articles/python-hero.html" class="article-card-link">
+                    <div class="article-card">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80" alt="Python">
+                        <div class="article-content">
+                            <div class="article-title">Corso Python da zero a hero <i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="article-meta">2 ottobre 2025</div>
+                            <div class="article-desc">Impara Python dalle basi alle applicazioni pratiche con esempi reali.</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="articles/html-course.html" class="article-card-link">
+                    <div class="article-card">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="HTML">
+                        <div class="article-content">
+                            <div class="article-title">Corso HTML: crea la tua prima pagina web <i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="article-meta">28 settembre 2025</div>
+                            <div class="article-desc">Guida pratica alla costruzione di pagine web per principianti.</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="articles/fullstack-course.html" class="article-card-link">
+                    <div class="article-card">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Full Stack">
+                        <div class="article-content">
+                            <div class="article-title">Corso Full Stack: frontend e backend per tutti <i class="fa-solid fa-arrow-right"></i></div>
+                            <div class="article-meta">25 settembre 2025</div>
+                            <div class="article-desc">Dal frontend al backend: tutto quello che serve per diventare sviluppatore completo.</div>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div style="text-align: center; margin-top: 30px;">
-                <a href="{{ '/blog.html' | relative_url }}" style="display: inline-block; padding: 12px 30px; background: var(--primary); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; transition: all 0.3s;">
+                <a href="{{ '/blog.html' | relative_url }}" style="display: inline-block; padding: 12px 30px; background: var(--primary); color: white; text-decoration: none; border-radius: 25px; font-weight:600;">
                     <i class="fa-solid fa-newspaper"></i> Vedi tutti gli articoli
                 </a>
             </div>
@@ -270,8 +288,10 @@ description: Portfolio professionale e blog su tecnologia, cybersecurity e innov
                 ctaContact: '<i class="fa-solid fa-paper-plane"></i> Contattami',
                 nav: ["Chi sono", "Servizi", "Portfolio", "Articoli", "Contatti"],
                 aboutTitle: "Chi sono",
-                aboutDesc: `Ciao! Mi chiamo <strong>Michele Siddi</strong>, sono laureato in Informatica e da 20 anni lavoro nel settore IT. Ho una forte passione per tecnologia e innovazione.<br>
-                        Conoscenze approfondite hardware e software, soluzioni digitali, creazione siti Web , APP e strategie digitali per aziende. In grado di creare campagne di marketing e di creare strategie aziendali basate sull'AI. Attualmente lavoro in Amazon.it da circa 10 anni.<br>
+                aboutDesc: `Questo è il mio spazio dedicato all’informatica e all’innovazione.<br>
+                        Qui condivido articoli, guide e news sul mondo della tecnologia, con un focus speciale su Intelligenza Artificiale.<br>
+                        Un punto d’incontro per chi vuole capire, imparare e restare aggiornato.<br>
+                        Offro anche consulenze personalizzate e supporto tecnico per privati, aziende e professionisti.<br>
                         <span style="font-weight:600;">Mi occupo di sviluppo software, sicurezza, cloud e strategie digitali.</span>`,
                 servicesTitle: "Servizi",
                 services: [
@@ -298,9 +318,11 @@ description: Portfolio professionale e blog su tecnologia, cybersecurity e innov
                 ctaContact: '<i class="fa-solid fa-paper-plane"></i> Contact me',
                 nav: ["About", "Services", "Portfolio", "Articles", "Contact"],
                 aboutTitle: "About Me",
-                aboutDesc: `Hi! My name is <strong>Michele Siddi</strong>, I hold a degree in Computer Science and I'm a manager passionate about technology and innovation.<br>
-                        For over 10 years I help companies and individuals achieve real digital results, working in international and dynamic environments (Amazon, SMEs, startups).<br>
-                        <span style="font-weight:600;">I deal with software development, cybersecurity, cloud and digital strategy.</span>`,
+                aboutDesc: `This is my space dedicated to IT and innovation.<br>
+                        Here I share articles, guides and news about technology, with a special focus on Artificial Intelligence.<br>
+                        A meeting point for those who want to understand, learn and stay up to date.<br>
+                        I also offer personalized consulting and technical support for individuals, companies and professionals.<br>
+                        <span style="font-weight:600;">I deal with software development, security, cloud and digital strategies.</span>`,
                 servicesTitle: "Services",
                 services: [
                     {title:"Web Development",desc:"Modern, responsive, SEO-optimized sites tailored to your brand and business. High-level digital experiences."},
@@ -407,7 +429,7 @@ description: Portfolio professionale e blog su tecnologia, cybersecurity e innov
         <button id="ai-chat-close" title="Chiudi">&times;</button>
     </div>
     <div id="ai-chat-messages">
-        <div class="ai-msg-bot"><b>Benvenuto!</b> Sono il tuo assistente AI per tematiche IT.E' come se stessi parlando con la versione digitale di Michele Siddi.<br>Ponimi domande su sviluppo software, sicurezza informatica, cloud, automazione, AI, e altro ancora.</div>
+        <div class="ai-msg-bot"><b>Benvenuto!</b> Sono il tuo assistente AI per tematiche IT.E' come se stessi parlando con la versione digitale di Michele Siddi.<br>Ponimi domande su sviluppo software, sicurezza informatica, cloud, AI e innovazione.</div>
     </div>
     <form id="ai-chat-form" autocomplete="off">
         <input type="text" id="ai-chat-input" placeholder="Scrivi la tua domanda IT..." required />
