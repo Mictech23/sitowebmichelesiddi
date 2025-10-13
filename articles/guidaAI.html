@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenti AI: La Guida Definitiva per Sviluppatori Italiani</title>
+    <style>
+        /* Stili di base per la leggibilità */
+        body { font-family: sans-serif; line-height: 1.6; }
+        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        pre { background-color: #f4f4f4; padding: 1rem; border-radius: 8px; white-space: pre-wrap; word-wrap: break-word; }
+    </style>
+</head>
+<body>
+
+<article>
+    <h1>Agenti AI: La Guida Definitiva per Sviluppatori Italiani (Casi d'Uso e Tutorial con Python)</h1>
+    <p><strong>Pubblicato il:</strong> 13 Ottobre 2025</p>
+
+    <p>L'intelligenza artificiale non è più solo una questione di modelli in grado di rispondere a domande o generare testo. Stiamo entrando in una nuova era: quella degli <strong>Agenti AI</strong>. Sistemi autonomi capaci di ragionare, pianificare e agire per raggiungere obiettivi complessi. Per noi sviluppatori italiani, questa non è solo una tecnologia affascinante, ma una delle più grandi opportunità professionali del decennio.</p>
+
+    <p>Se sei pronto a passare dalla semplice interazione con un LLM alla costruzione di sistemi che eseguono task nel mondo reale, questa guida è il tuo punto di partenza.</p>
+
+    <nav>
+        <h2>Indice dei Contenuti</h2>
+        <ol>
+            <li><a href="#sezione1">Cosa Sono Veramente gli Agenti AI? Dalla Teoria alla Pratica</a></li>
+            <li><a href="#sezione2">Perché gli Agenti AI Sono una Rivoluzione (e non solo un Hype)</a></li>
+            <li><a href="#sezione3">L'Architettura di un Agente AI: I 4 Componenti Chiave</a></li>
+            <li><a href="#sezione4">I Framework Python da Conoscere: LangChain, CrewAI e Altri</a></li>
+            <li><a href="#sezione5">Tutorial Pratico: Costruiamo un "Ricercatore di Notizie Tech" con LangChain e Tavily</a></li>
+            <li><a href="#sezione6">Casi d'Uso Reali che Puoi Implementare Oggi</a></li>
+            <li><a href="#sezione7">Sfide e Futuro degli Agenti AI in Italia</a></li>
+        </ol>
+    </nav>
+
+    <section id="sezione1">
+        <h2>1. Cosa Sono Veramente gli Agenti AI? Dalla Teoria alla Pratica</h2>
+        <p>Un Agente AI non è semplicemente un chatbot più evoluto. È un sistema progettato per <strong>agire in modo autonomo</strong> per raggiungere un obiettivo. La differenza fondamentale risiede nell'autonomia e nella capacità di <em>pianificazione</em>.</p>
+        <p>Mentre un Large Language Model (LLM) come GPT-4 risponde a un input e poi si ferma, un Agente AI prende un obiettivo e lo scompone in passaggi intermedi. Interagisce con l'ambiente (API, siti web, file locali), osserva i risultati delle sue azioni, corregge il tiro se qualcosa va storto e continua a lavorare fino a quando l'obiettivo non è stato raggiunto.</p>
+        <p>In parole povere:</p>
+        <ul>
+            <li><strong>LLM:</strong> "Scrivimi il codice per fare una richiesta API a <code>example.com</code>." -> Ti fornisce il codice.</li>
+            <li><strong>Agente AI:</strong> "Controlla il prezzo del prodotto X su <code>example.com</code> e avvisami via email se è sceso sotto i 50€." -> Pianifica, esegue la richiesta, analizza il risultato, e se necessario, interagisce con un servizio di email per inviare la notifica. Tutto da solo.</li>
+        </ul>
+    </section>
+
+    <section id="sezione2">
+        <h2>2. Perché gli Agenti AI Sono una Rivoluzione (e non solo un Hype)</h2>
+        <p>Gli Agenti AI rappresentano il passaggio dall'<strong>AI come strumento di assistenza</strong> all'<strong>AI come collaboratore proattivo</strong>. Questo abilita scenari prima impensabili:</p>
+        <ul>
+            <li><strong>Automazione di Workflow Complessi:</strong> Non solo singole task, ma interi processi aziendali (es. gestione degli ordini, analisi di mercato, onboarding di nuovi clienti).</li>
+            <li><strong>Interazione con il Mondo Digitale:</strong> Possono navigare siti web, compilare form, utilizzare software esistenti tramite API, superando i limiti dei sistemi chiusi.</li>
+            <li><strong>Personalizzazione Estrema:</strong> Un agente può agire come un assistente personale che impara le tue preferenze, gestisce la tua agenda, filtra le tue email e prepara report su misura.</li>
+        </ul>
+        <p>Per gli sviluppatori, questo significa smettere di pensare in termini di "script" e iniziare a pensare in termini di "obiettivi".</p>
+    </section>
+
+    <section id="sezione3">
+        <h2>3. L'Architettura di un Agente AI: I 4 Componenti Chiave</h2>
+        <p>Un agente AI si basa tipicamente su un ciclo di ragionamento e azione. I suoi componenti fondamentali sono:</p>
+        <ol>
+            <li><strong>Core Model (LLM):</strong> Il "cervello" dell'agente. Un modello linguistico potente (es. GPT-4, Llama 3, Claude 3) che si occupa del ragionamento, della pianificazione e della scomposizione dei problemi.</li>
+            <li><strong>Tools
