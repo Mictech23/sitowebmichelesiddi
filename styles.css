@@ -997,3 +997,69 @@ img[loading="lazy"]:not([src]) {
           (background-image: image-set(url("test.webp") 1x)) {
     /* WebP is supported */
 }
+
+/* Stile base per articoli */
+.blog-article {
+    max-width: 700px;
+    margin: 40px auto 40px auto;
+    padding: 32px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+    font-size: 1.14em;
+    line-height: 1.7;
+    color: #222;
+}
+
+.blog-article h1, .blog-article h2, .blog-article h3 {
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: #1a3a7c;
+}
+
+.blog-article h1 {
+    font-size: 2.1em;
+    margin-bottom: 0.2em;
+}
+
+.blog-article .date {
+    color: #4985e7;
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 1.1em;
+    display: block;
+}
+
+.blog-article img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 1.5em auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+}
+
+.blog-article ul, .blog-article ol {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.blog-article pre, .blog-article code {
+    background: #f4f7fc;
+    color: #164;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 1em;
+    font-family: "Fira Code", "Menlo", "Monaco", monospace;
+    margin-bottom: 1em;
+    display: block;
+    overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .blog-article {
+        padding: 16px;
+        max-width: 98vw;
+    }
+}
