@@ -3,156 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenti AI: La Guida Definitiva per Sviluppatori Italiani</title>
-    <style>
-        /* Stili di base per la leggibilità */
-        body { font-family: sans-serif; line-height: 1.6; }
-        code { background-color: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
-        pre { background-color: #f4f4f4; padding: 1rem; border-radius: 8px; white-space: pre-wrap; word-wrap: break-word; }
-    </style>
+    <title>Agenti AI: La Guida Definitiva per Sviluppatori Italiani | Michele Siddi</title>
+    <meta name="description" content="Guida completa agli Agenti AI con tutorial Python, LangChain e casi d'uso reali. Impara a costruire sistemi autonomi capaci di ragionare e agire.">
+    <meta name="keywords" content="agenti AI, AI agents, LangChain, Python, machine learning, automazione intelligente">
+    <meta name="author" content="Michele Siddi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+        <button id="mode-light" title="Light mode" class="active"><i class="fa-regular fa-sun"></i></button>
+        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    
+    <article class="blog-article">
+        <a href="../index.html#articles" class="back-link" style="display:inline-block; margin-bottom:20px; color:var(--primary); text-decoration:none; font-weight:600;">
+            <i class="fa-solid fa-arrow-left"></i> Torna agli articoli
+        </a>
+        
+        <h1>Agenti AI: La Guida Definitiva per Sviluppatori Italiani</h1>
+        <p class="date"><i class="fa-solid fa-calendar"></i> 10 ottobre 2025 | <i class="fa-solid fa-user"></i> Michele Siddi</p>
+        
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="AI Agents" loading="lazy">
+        
+        <p>
+            L'intelligenza artificiale non è più solo una questione di modelli in grado di rispondere a domande o generare testo. 
+            Stiamo entrando in una nuova era: quella degli <strong>Agenti AI</strong>. Sistemi autonomi capaci di ragionare, pianificare e agire per raggiungere obiettivi complessi. 
+            Per noi sviluppatori italiani, questa non è solo una tecnologia affascinante, ma una delle più grandi opportunità professionali del decennio.
+        </p>
 
-<article>
-    <h1>Agenti AI: La Guida Definitiva per Sviluppatori Italiani (Casi d'Uso e Tutorial con Python)</h1>
-    <p><strong>Pubblicato il:</strong> 13 Ottobre 2025</p>
+        <p>
+            Se sei pronto a passare dalla semplice interazione con un LLM alla costruzione di sistemi che eseguono task nel mondo reale, questa guida è il tuo punto di partenza.
+        </p>
 
-    <p>L'intelligenza artificiale non è più solo una questione di modelli in grado di rispondere a domande o generare testo. Stiamo entrando in una nuova era: quella degli <strong>Agenti AI</strong>. Sistemi autonomi capaci di ragionare, pianificare e agire per raggiungere obiettivi complessi. Per noi sviluppatori italiani, questa non è solo una tecnologia affascinante, ma una delle più grandi opportunità professionali del decennio.</p>
+        <nav style="background: var(--secondary); padding: 20px; border-radius: 12px; margin: 30px 0;">
+            <h2 style="margin-top: 0;">📑 Indice dei Contenuti</h2>
+            <ol style="line-height: 2;">
+                <li><a href="#sezione1" style="color: var(--primary);">Cosa Sono Veramente gli Agenti AI? Dalla Teoria alla Pratica</a></li>
+                <li><a href="#sezione2" style="color: var(--primary);">Perché gli Agenti AI Sono una Rivoluzione</a></li>
+                <li><a href="#sezione3" style="color: var(--primary);">L'Architettura di un Agente AI: I 4 Componenti Chiave</a></li>
+                <li><a href="#sezione4" style="color: var(--primary);">I Framework Python: LangChain, CrewAI e Altri</a></li>
+                <li><a href="#sezione5" style="color: var(--primary);">Tutorial Pratico: Costruire un Agente con LangChain</a></li>
+                <li><a href="#sezione6" style="color: var(--primary);">Casi d'Uso Reali che Puoi Implementare Oggi</a></li>
+                <li><a href="#sezione7" style="color: var(--primary);">Sfide e Futuro degli Agenti AI</a></li>
+            </ol>
+        </nav>
 
-    <p>Se sei pronto a passare dalla semplice interazione con un LLM alla costruzione di sistemi che eseguono task nel mondo reale, questa guida è il tuo punto di partenza.</p>
+        <section id="sezione1">
+            <h2>1. 🤖 Cosa Sono Veramente gli Agenti AI? Dalla Teoria alla Pratica</h2>
+            <p>
+                Un Agente AI non è semplicemente un chatbot più evoluto. È un sistema progettato per <strong>agire in modo autonomo</strong> per raggiungere un obiettivo. 
+                La differenza fondamentale risiede nell'autonomia e nella capacità di <em>pianificazione</em>.
+            </p>
+            
+            <p>
+                Mentre un Large Language Model (LLM) come GPT-4 risponde a un input e poi si ferma, un Agente AI prende un obiettivo e lo scompone in passaggi intermedi. 
+                Interagisce con l'ambiente (API, siti web, file locali), osserva i risultati delle sue azioni, corregge il tiro se qualcosa va storto e continua a lavorare 
+                fino a quando l'obiettivo non è stato raggiunto.
+            </p>
+            
+            <h3>La differenza chiave:</h3>
+            <ul>
+                <li>
+                    <strong>LLM tradizionale:</strong> "Scrivimi il codice per fare una richiesta API a <code>example.com</code>." 
+                    → Ti fornisce il codice e si ferma.
+                </li>
+                <li>
+                    <strong>Agente AI:</strong> "Controlla il prezzo del prodotto X su <code>example.com</code> e avvisami via email se è sceso sotto i 50€." 
+                    → Pianifica, esegue la richiesta, analizza il risultato, e se necessario, interagisce con un servizio di email per inviare la notifica. Tutto in autonomia.
+                </li>
+            </ul>
+        </section>
 
-    <nav>
-        <h2>Indice dei Contenuti</h2>
-        <ol>
-            <li><a href="#sezione1">Cosa Sono Veramente gli Agenti AI? Dalla Teoria alla Pratica</a></li>
-            <li><a href="#sezione2">Perché gli Agenti AI Sono una Rivoluzione (e non solo un Hype)</a></li>
-            <li><a href="#sezione3">L'Architettura di un Agente AI: I 4 Componenti Chiave</a></li>
-            <li><a href="#sezione4">I Framework Python da Conoscere: LangChain, CrewAI e Altri</a></li>
-            <li><a href="#sezione5">Tutorial Pratico: Costruiamo un "Ricercatore di Notizie Tech" con LangChain e Tavily</a></li>
-            <li><a href="#sezione6">Casi d'Uso Reali che Puoi Implementare Oggi</a></li>
-            <li><a href="#sezione7">Sfide e Futuro degli Agenti AI in Italia</a></li>
-        </ol>
-    </nav>
+        <section id="sezione2">
+            <h2>2. 🚀 Perché gli Agenti AI Sono una Rivoluzione</h2>
+            <p>
+                Gli Agenti AI rappresentano il passaggio dall'<strong>AI come strumento di assistenza</strong> all'<strong>AI come collaboratore proattivo</strong>. 
+                Questo abilita scenari prima impensabili:
+            </p>
+            
+            <h3>Automazione di Workflow Complessi</h3>
+            <p>Non solo singole task, ma interi processi aziendali:</p>
+            <ul>
+                <li>Gestione automatizzata degli ordini end-to-end</li>
+                <li>Analisi di mercato e report automatici</li>
+                <li>Onboarding di nuovi clienti con personalizzazione</li>
+                <li>Monitoring proattivo e risoluzione problemi</li>
+            </ul>
+            
+            <h3>Interazione con il Mondo Digitale</h3>
+            <p>Gli agenti possono:</p>
+            <ul>
+                <li>Navigare siti web e estrarre informazioni</li>
+                <li>Compilare form e interagire con interfacce web</li>
+                <li>Utilizzare software esistenti tramite API</li>
+                <li>Integrare sistemi diversi senza codice custom</li>
+            </ul>
+            
+            <h3>Personalizzazione Estrema</h3>
+            <p>Un agente può agire come un assistente personale che:</p>
+            <ul>
+                <li>Impara le tue preferenze nel tempo</li>
+                <li>Gestisce autonomamente la tua agenda</li>
+                <li>Filtra e prioritizza email e notifiche</li>
+                <li>Prepara report personalizzati su richiesta</li>
+            </ul>
+            
+            <p>
+                Per gli sviluppatori, questo significa smettere di pensare in termini di "script" e iniziare a pensare in termini di "obiettivi". 
+                Non più "come faccio a fare X", ma "quale obiettivo voglio che l'agente raggiunga".
+            </p>
+        </section>
 
-    <section id="sezione1">
-        <h2>1. Cosa Sono Veramente gli Agenti AI? Dalla Teoria alla Pratica</h2>
-        <p>Un Agente AI non è semplicemente un chatbot più evoluto. È un sistema progettato per <strong>agire in modo autonomo</strong> per raggiungere un obiettivo. La differenza fondamentale risiede nell'autonomia e nella capacità di <em>pianificazione</em>.</p>
-        <p>Mentre un Large Language Model (LLM) come GPT-4 risponde a un input e poi si ferma, un Agente AI prende un obiettivo e lo scompone in passaggi intermedi. Interagisce con l'ambiente (API, siti web, file locali), osserva i risultati delle sue azioni, corregge il tiro se qualcosa va storto e continua a lavorare fino a quando l'obiettivo non è stato raggiunto.</p>
-        <p>In parole povere:</p>
-        <ul>
-            <li><strong>LLM:</strong> "Scrivimi il codice per fare una richiesta API a <code>example.com</code>." -> Ti fornisce il codice.</li>
-            <li><strong>Agente AI:</strong> "Controlla il prezzo del prodotto X su <code>example.com</code> e avvisami via email se è sceso sotto i 50€." -> Pianifica, esegue la richiesta, analizza il risultato, e se necessario, interagisce con un servizio di email per inviare la notifica. Tutto da solo.</li>
-        </ul>
-    </section>
+        <section id="sezione3">
+            <h2>3. 🏗️ L'Architettura di un Agente AI: I 4 Componenti Chiave</h2>
+            <p>Per costruire un Agente robusto, dobbiamo combinare quattro componenti fondamentali:</p>
+            
+            <h3>1. Core Model (LLM) - Il Cervello</h3>
+            <p>Il cuore è un Large Language Model potente (GPT-4, Claude 3, o modelli open-source come Llama 3) che si occupa di:</p>
+            <ul>
+                <li><strong>Ragionamento:</strong> Analizzare il problema e decidere il piano d'azione</li>
+                <li><strong>Pianificazione:</strong> Scomporre obiettivi complessi in passaggi eseguibili</li>
+                <li><strong>Decision-making:</strong> Decidere quale strumento utilizzare e quando</li>
+                <li><strong>Interpretazione:</strong> Comprendere i risultati delle azioni intraprese</li>
+            </ul>
+            
+            <h3>2. Memoria (Short & Long-term)</h3>
+            <p>La memoria impedisce all'Agente di dimenticare le interazioni passate:</p>
+            <ul>
+                <li><strong>Memoria a breve termine:</strong> Contesto della conversazione corrente</li>
+                <li><strong>Memoria a lungo termine:</strong> Conoscenza accumulata, preferenze, storia delle interazioni</li>
+                <li><strong>RAG (Retrieval Augmented Generation):</strong> Accesso a knowledge base esterne</li>
+                <li><strong>Vector Stores:</strong> Database specializzati (ChromaDB, Pinecone, FAISS) per embedding semantici</li>
+            </ul>
+            
+            <h3>3. Tools (Strumenti)</h3>
+            <p>Gli strumenti sono l'interfaccia dell'Agente con il mondo esterno:</p>
+            <ul>
+                <li><strong>Web Search:</strong> Google, Bing, Tavily per informazioni in tempo reale</li>
+                <li><strong>Code Interpreter:</strong> Eseguire codice Python per calcoli e analisi</li>
+                <li><strong>Database Access:</strong> Query SQL o NoSQL per dati aziendali</li>
+                <li><strong>API Integrations:</strong> Accesso a servizi esterni (email, CRM, payment, ecc.)</li>
+                <li><strong>File Operations:</strong> Leggere, scrivere e manipolare file</li>
+            </ul>
+            
+            <h3>4. Planning & Execution Loop</h3>
+            <p>Il ciclo ReAct (Reasoning and Acting):</p>
+            <pre><code>1. Osservazione: L'agente riceve un obiettivo/domanda
+2. Ragionamento: Analizza e pianifica il prossimo passo
+3. Azione: Esegue un'azione (usa uno strumento)
+4. Osservazione: Valuta il risultato dell'azione
+5. Ripeti finché l'obiettivo non è raggiunto</code></pre>
+        </section>
 
-    <section id="sezione2">
-        <h2>2. Perché gli Agenti AI Sono una Rivoluzione (e non solo un Hype)</h2>
-        <p>Gli Agenti AI rappresentano il passaggio dall'<strong>AI come strumento di assistenza</strong> all'<strong>AI come collaboratore proattivo</strong>. Questo abilita scenari prima impensabili:</p>
-        <ul>
-            <li><strong>Automazione di Workflow Complessi:</strong> Non solo singole task, ma interi processi aziendali (es. gestione degli ordini, analisi di mercato, onboarding di nuovi clienti).</li>
-            <li><strong>Interazione con il Mondo Digitale:</strong> Possono navigare siti web, compilare form, utilizzare software esistenti tramite API, superando i limiti dei sistemi chiusi.</li>
-            <li><strong>Personalizzazione Estrema:</strong> Un agente può agire come un assistente personale che impara le tue preferenze, gestisce la tua agenda, filtra le tue email e prepara report su misura.</li>
-        </ul>
-        <p>Per gli sviluppatori, questo significa smettere di pensare in termini di "script" e iniziare a pensare in termini di "obiettivi".</p>
-    </section>
+        <section id="sezione4">
+            <h2>4. 🐍 I Framework Python: LangChain, CrewAI e Altri</h2>
+            
+            <h3>LangChain - Il Framework Più Completo</h3>
+            <p>LangChain è il framework leader per costruire applicazioni con LLM e agenti:</p>
+            <ul>
+                <li><strong>Agents:</strong> Framework completo per creare agenti autonomi</li>
+                <li><strong>Tools:</strong> Libreria estesa di strumenti predefiniti</li>
+                <li><strong>Memory:</strong> Gestione avanzata della memoria conversazionale</li>
+                <li><strong>Chains:</strong> Concatenare operazioni in workflow complessi</li>
+                <li><strong>Callbacks:</strong> Monitorare e debuggare l'esecuzione</li>
+            </ul>
+            
+            <pre><code>pip install langchain langchain-openai tavily-python</code></pre>
+            
+            <h3>CrewAI - Multi-Agent Collaboration</h3>
+            <p>CrewAI specializzato in sistemi multi-agente che collaborano:</p>
+            <ul>
+                <li>Team di agenti specializzati che lavorano insieme</li>
+                <li>Ruoli definiti (ricercatore, analista, scrittore)</li>
+                <li>Workflow collaborativi automatici</li>
+            </ul>
+            
+            <h3>AutoGPT & BabyAGI</h3>
+            <p>Framework sperimentali per agenti completamente autonomi:</p>
+            <ul>
+                <li>Auto-prompting e auto-miglioramento</li>
+                <li>Gestione autonoma di task list</li>
+                <li>Ideali per ricerca e sperimentazione</li>
+            </ul>
+        </section>
 
-    <section id="sezione3">
-        <h2>3. L'Architettura di un Agente AI: I 4 Componenti Chiave</h2>
-        <p>Agenti AI: La Guida Definitiva per Sviluppatori Italiani (Implementazione e Tutorial con Python)Se i Large Language Models (LLM) sono il motore, gli Agenti AI sono l'intero sistema operativo. Questa guida è pensata per lo sviluppatore che vuole superare la fase della semplice prompt engineering e iniziare a costruire sistemi autonomi, capaci di pianificare, agire e risolvere problemi complessi nel mondo reale.Non ci limiteremo alla teoria: analizzeremo l'architettura, ci concentreremo sul framework LangChain in Python e vedremo come dotare un LLM di strumenti concreti.1. Dalla Chatbot all'Agente: Il Cambio di Paradigma 💡La differenza fondamentale tra un LLM e un Agente AI risiede nella loro capacità di Agency (iniziativa).CaratteristicaLLM Base (Es. ChatGPT)Agente AICapacitàRisposta al prompt, generazione testo.Risoluzione di obiettivi complessi e multi-step.InterazioneReattiva (risponde solo all'input).Proattiva (pianifica ed esegue azioni esterne).StrumentiNessuno o limitato (solo dati di training).Accesso illimitato a API, codice, DB, Web.MemoriaSolo memoria a breve termine (sessione).Memoria a breve e a lungo termine (Vector DB).Un Agente AI opera in un Loop di Ragionamento e Azione (ReAct), che imita il processo decisionale umano: Osservazione → Ragionamento → Azione.2. Architettura Tecnica di un Agente AI in PythonPer costruire un Agente robusto, dobbiamo combinare diversi componenti fondamentali, gestiti in modo ottimale dal framework LangChain.A. Il Core Decisionale (LLM)Il cuore è un Large Language Model potente (GPT-4, Claude 3, o modelli open-source come Llama 3) che gestisce l'interpretazione del linguaggio e la generazione del piano d'azione. Il modello deve essere in grado di:Analizzare l'input (prompt) e l'osservazione (risultato dell'azione).Decidere se è necessario uno strumento e quale strumento utilizzare.Formattare la chiamata dello strumento in modo corretto (e.g., JSON o un formato specifico).B. Memoria a Lungo Termine (RAG e Vector Stores)La memoria è ciò che impedisce all'Agente di dimenticare le interazioni passate o la conoscenza aziendale.RAG (Retrieval Augmented Generation): Permette all'LLM di accedere a dati esterni e aggiornati, fondamentali per superare il limite di conoscenza statica del pre-training.Vector Store: Database specializzati (es. ChromaDB, Pinecone, FAISS) che archiviano i dati aziendali come vettori di embedding. Quando l'Agente ha bisogno di informazioni, cerca la similarità semantica nel Vector Store e recupera i segmenti di testo più rilevanti da fornire all'LLM.C. Gli Strumenti (Tools)Gli strumenti sono l'interfaccia dell'Agente con il mondo. Possono essere qualsiasi cosa:GoogleSearchAPI: Per aggiornare la conoscenza in tempo reale.CodeInterpreter: Per eseguire codice Python o Shell e risolvere problemi matematici/logici.DatabaseConnector: Per interrogare un database SQL o NoSQL.EmailSender: Per compiere azioni concrete come l'invio di notifiche.3. Tutorial Pratico: Costruire un Agente "Analista Dati" con LangChainImplementeremo un Agente semplice ma funzionale che può eseguire codice Python per rispondere a domande basate su dati o logica complessa, come un analista di Business Intelligence.3.1. Prerequisiti e SetupAssicurati di avere Python installato e le librerie necessarie:Bashpip install langchain langchain-openai tavily-python
-Nota: Questo esempio utilizza un modello OpenAI (come GPT-4) per il suo avanzato ragionamento. Avrai bisogno di una chiave API.3.2. Definizione dello Strumento (Tool)Il nostro Agente necessiterà di uno strumento per eseguire codice. Usiamo l'interfaccia standard di LangChain per definire uno strumento Python.Pythonfrom langchain.tools import tool
+        <section id="sezione5">
+            <h2>5. 💻 Tutorial Pratico: Costruire un Agente con LangChain</h2>
+            <p>Implementiamo un Agente semplice ma funzionale che può eseguire codice Python per rispondere a domande complesse.</p>
+            
+            <h3>Step 1: Setup e Installazione</h3>
+            <pre><code>pip install langchain langchain-openai tavily-python
+
+# Imposta la tua API key
+import os
+os.environ["OPENAI_API_KEY"] = "la-tua-api-key"</code></pre>
+            
+            <h3>Step 2: Definizione dello Strumento</h3>
+            <pre><code>from langchain.tools import tool
 import io
 import sys
-
-# 1. Definizione dello Strumento per l'Esecuzione di Codice
 
 @tool
 def run_python_code(code: str) -> str:
     """
-    Esegue il codice Python fornito e cattura l'output. 
+    Esegue codice Python e restituisce l'output.
     Utile per calcoli matematici complessi o logica.
     """
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
     
     try:
-        # L'esecuzione del codice avviene in un contesto controllato
-        exec(code, {}) 
+        exec(code, {})
         output = redirected_output.getvalue()
-        
-        # Aggiustamento per l'output vuoto o insignificante
-        if not output and "print(" not in code:
-             return f"Codice eseguito con successo, ma nessuna stampa visualizzata. 
-                       Assicurati di usare 'print()' per mostrare i risultati."
-                       
-        return f"Output dell'esecuzione del codice:\n{output}"
-    
+        return f"Output: {output}" if output else "Codice eseguito con successo"
     except Exception as e:
-        return f"Errore nell'esecuzione del codice: {e}"
-    
+        return f"Errore: {e}"
     finally:
         sys.stdout = old_stdout
 
-# Elenco degli strumenti disponibili per l'Agente
-tools = [run_python_code]
-3.3. Inizializzazione dell'LLM e del Prompt di SistemaL'Agente ha bisogno di un Prompt di Sistema (System Prompt) che ne definisca la personalità, gli obiettivi e, soprattutto, le istruzioni su come interagire con gli strumenti. Questa è una forma avanzata di prompt engineering.Pythonfrom langchain_openai import ChatOpenAI
+tools = [run_python_code]</code></pre>
+            
+            <h3>Step 3: Inizializzazione LLM e Prompt</h3>
+            <pre><code>from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 
-# Inizializza l'LLM
-llm = ChatOpenAI(model="gpt-4o", temperature=0) 
+llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
-# Il System Prompt è cruciale per la logica ReAct
 system_prompt = """
-Sei un assistente AI di analisi dati altamente competente.
-Il tuo obiettivo è risolvere i quesiti degli utenti.
-Quando ti viene richiesto un calcolo complesso, una manipolazione di stringhe o una logica matematica, 
-DEVI utilizzare lo strumento 'run_python_code'. 
+Sei un assistente AI di analisi dati competente.
+Quando ti viene richiesto un calcolo complesso, usa lo strumento 'run_python_code'.
 Non eseguire MAI calcoli direttamente.
-Procedi sempre seguendo il ciclo Ragionamento (Reasoning) -> Azione (Action).
+Ragiona passo-passo prima di agire.
 """
 
-# Definiamo la struttura del prompt, inclusi gli strumenti e la cronologia
-prompt = ChatPromptTemplate.from_messages(
-    [
-        ("system", system_prompt),
-        MessagesPlaceholder(variable_name="chat_history", optional=True), # Per la memoria
-        ("human", "{input}"),
-        MessagesPlaceholder(variable_name="agent_scratchpad"), # Spazio di lavoro per l'Agente (ReAct)
-    ]
-)
-3.4. Creazione dell'AgenteUtilizzeremo l'approccio basato sulla Tool Calling (chiamate a strumenti) supportato nativamente da modelli come GPT-4o, che semplifica l'implementazione del ciclo ReAct.Pythonfrom langchain.agents import AgentExecutor, create_openai_tools_agent
+prompt = ChatPromptTemplate.from_messages([
+    ("system", system_prompt),
+    ("human", "{input}"),
+    MessagesPlaceholder(variable_name="agent_scratchpad"),
+])</code></pre>
+            
+            <h3>Step 4: Creazione e Test dell'Agente</h3>
+            <pre><code>from langchain.agents import AgentExecutor, create_openai_tools_agent
 
-# 1. Crea l'Agente unendo LLM, Strumenti e Prompt
-agent = create_openai_tools_agent(
-    llm=llm,
-    tools=tools,
-    prompt=prompt
-)
+agent = create_openai_tools_agent(llm=llm, tools=tools, prompt=prompt)
 
-# 2. Crea l'esecutore dell'Agente
-# L'AgentExecutor gestisce il loop Ragionamento-Azione-Osservazione
 agent_executor = AgentExecutor(
-    agent=agent, 
-    tools=tools, 
-    verbose=True, # Mostra il processo ReAct a console
-    handle_parsing_errors=True # Gestione degli errori di formattazione
+    agent=agent,
+    tools=tools,
+    verbose=True,
+    handle_parsing_errors=True
 )
-3.5. Esecuzione e Test dell'AgenteOra possiamo testare l'Agente con un compito che richiede l'esecuzione di codice:Python# Domanda che richiede l'uso dello strumento 'run_python_code'
+
+# Test
 question = """
-Ho tre server con le seguenti disponibilità orarie settimanali in percentuale: 
-Server A: 99.85%, Server B: 99.92%, Server C: 99.98%. 
-Assumendo 168 ore totali in una settimana, qual è il tempo medio di inattività (in minuti) per i tre server? 
-Mostra il calcolo dettagliato.
+Calcola la media di questi numeri: 15, 23, 18, 42, 31, 27.
+Poi moltiplica il risultato per 1.15 (IVA 15%).
 """
 
-print(f"\n--- INIZIO ESECUZIONE AGENTE ---\n")
+result = agent_executor.invoke({"input": question})
+print(result['output'])</code></pre>
+        </section>
 
-try:
-    result = agent_executor.invoke({"input": question})
-    print(f"\nRISPOSTA FINALE:\n{result['output']}")
+        <section id="sezione6">
+            <h2>6. 🎯 Casi d'Uso Reali che Puoi Implementare Oggi</h2>
+            
+            <h3>1. Research Assistant</h3>
+            <p>Agente che cerca informazioni online, le analizza e crea report strutturati:</p>
+            <ul>
+                <li>Ricerca di notizie e trend di mercato</li>
+                <li>Analisi competitor</li>
+                <li>Monitoraggio brand reputation</li>
+            </ul>
+            
+            <h3>2. Customer Support Agent</h3>
+            <p>Assistente che gestisce richieste clienti con accesso a knowledge base:</p>
+            <ul>
+                <li>Risponde a FAQ complesse</li>
+                <li>Accede a documenti e policy aziendali</li>
+                <li>Crea ticket per problemi irrisolti</li>
+            </ul>
+            
+            <h3>3. Data Analyst Agent</h3>
+            <p>Analizza dataset, genera visualizzazioni e fornisce insights:</p>
+            <ul>
+                <li>Query su database SQL</li>
+                <li>Analisi statistica con Python</li>
+                <li>Generazione report e grafici</li>
+            </ul>
+            
+            <h3>4. Content Creator Agent</h3>
+            <p>Crea contenuti ottimizzati per diversi canali:</p>
+            <ul>
+                <li>Ricerca argomenti trending</li>
+                <li>Genera bozze di articoli o post social</li>
+                <li>Ottimizza per SEO</li>
+            </ul>
+            
+            <h3>5. Task Automation Agent</h3>
+            <p>Automatizza workflow ripetitivi:</p>
+            <ul>
+                <li>Data entry e migrazione</li>
+                <li>Monitoraggio e notifiche</li>
+                <li>Backup e manutenzione</li>
+            </ul>
+        </section>
 
-except Exception as e:
-    print(f"L'agente ha incontrato un errore grave: {e}")
-L'output del terminale mostrerà l'intera sequenza Ragionamento → Chiamata Strumento → Osservazione → Ragionamento Finale, confermando che l'Agente ha pianificato l'azione e utilizzato correttamente lo strumento run_python_code.4. Tecniche Avanzate per Agenti RobustiPer gli sviluppatori che mirano alla produzione, sono necessarie tecniche per rendere gli Agenti più stabili e intelligenti.A. Ottimizzazione della Memoria (RAG)Quando si lavora con dati aziendali riservati, il RAG è obbligatorio.Suddivisione (Chunking): I documenti aziendali (PDF, testi, log) vengono suddivisi in piccoli segmenti di testo (chunks).Vettorizzazione: Ogni chunk viene trasformato in un vettore di embedding (numerico) tramite un modello dedicato (es. text-embedding-3-small).Archiviazione: I vettori sono archiviati in un Vector Store.Recupero (Retrieval): Quando l'Agente riceve una domanda, la domanda stessa viene vettorizzata e usata per recuperare i chunks più semanticamente vicini dal Vector Store.Questi chunks recuperati vengono aggiunti al Context Window dell'LLM prima che questo formuli la risposta, garantendo precisione e citazione delle fonti.B. Gestione e Selezione Dinamica degli StrumentiIn contesti aziendali, un Agente può avere decine di strumenti (DB, CRM, API interne).Prompting Dinamico: Il system_prompt deve descrivere con precisione le funzionalità di ogni strumento, inclusi i tipi di dato accettati e l'output atteso. Un buon prompt minimizza i tentativi falliti dell'Agente.Routing e Tool-Calling: Gli LLM più recenti (come GPT-4o, Llama 3) eccellono nel Tool Calling nativo: riconoscono direttamente se l'input richiede un'azione e generano un oggetto JSON formattato per chiamare lo strumento, superando le precedenti, più fragili, implementazioni basate su parsing di stringhe.C. Autocorrezione e ValutazioneGli Agenti falliscono. Una progettazione matura include meccanismi di gestione degli errori:Self-Correction Loop: Se l'output di un'azione è un errore (es. un errore di sintassi Python), l'Agente deve essere istruito nel system_prompt a rileggere l'errore (l'Osservazione) e tentare un'azione correttiva.Limiti di Tentativo: Impostare un numero massimo di iterazioni nel ciclo ReAct (max_iterations in AgentExecutor) per prevenire loop infiniti o spreco di risorse.Conclusione: L'Era della Proattività 🚀Gli Agenti AI sono il punto di svolta. Non sono semplici assistenti, ma sistemi software interconnessi che delegano le mansioni più gravose (Ricerca, Analisi Dati, Interazione API) all'Intelligenza Artificiale.Per lo sviluppatore in Italia, padroneggiare l'architettura degli Agenti con framework come LangChain è la competenza chiave per costruire la prossima generazione di applicazioni aziendali, spostando il focus dal cosa l'AI può rispondere al cosa l'AI può fare per automatizzare il business.</p>
-        <ol>
-            <li><strong>Core Model (LLM):</strong> Il "cervello" dell'agente. Un modello linguistico potente (es. GPT-4, Llama 3, Claude 3) che si occupa del ragionamento, della pianificazione e della scomposizione dei problemi.</li>
-            <li><strong>Tools
+        <section id="sezione7">
+            <h2>7. 🔮 Sfide e Futuro degli Agenti AI</h2>
+            
+            <h3>Sfide Attuali</h3>
+            <ul>
+                <li><strong>Affidabilità:</strong> Gli agenti possono commettere errori o entrare in loop</li>
+                <li><strong>Costi:</strong> Chiamate multiple all'API possono diventare costose</li>
+                <li><strong>Sicurezza:</strong> Dare autonomia comporta rischi (code injection, data leaks)</li>
+                <li><strong>Latenza:</strong> Processi multi-step richiedono tempo</li>
+                <li><strong>Debugging:</strong> Tracciare problemi in sistemi autonomi è complesso</li>
+            </ul>
+            
+            <h3>Best Practice per la Produzione</h3>
+            <ul>
+                <li><strong>Human-in-the-loop:</strong> Revisione umana per decisioni critiche</li>
+                <li><strong>Sandboxing:</strong> Limita l'accesso degli agenti a risorse sensibili</li>
+                <li><strong>Monitoring:</strong> Traccia tutte le azioni e decisioni</li>
+                <li><strong>Fallback mechanisms:</strong> Gestione errori e escalation</li>
+                <li><strong>Rate limiting:</strong> Previeni loop infiniti e costi eccessivi</li>
+            </ul>
+            
+            <h3>Il Futuro degli Agenti AI</h3>
+            <ul>
+                <li><strong>Multi-agent systems:</strong> Team di agenti specializzati che collaborano</li>
+                <li><strong>Long-term memory:</strong> Agenti che imparano e si evolvono nel tempo</li>
+                <li><strong>Physical world interaction:</strong> Robotica e automazione fisica</li>
+                <li><strong>Autonomous organizations:</strong> DAO e organizzazioni gestite da agenti</li>
+            </ul>
+        </section>
+
+        <h2>🚀 Conclusione: L'Era della Proattività</h2>
+        <p>
+            Gli Agenti AI sono il punto di svolta. Non sono semplici assistenti, ma sistemi software interconnessi che delegano le mansioni più gravose 
+            (ricerca, analisi dati, interazione API) all'Intelligenza Artificiale.
+        </p>
+        
+        <p>
+            Per noi sviluppatori italiani, padroneggiare l'architettura degli Agenti con framework come LangChain è la competenza chiave per costruire 
+            la prossima generazione di applicazioni aziendali, spostando il focus dal <em>"cosa l'AI può rispondere"</em> al <em>"cosa l'AI può fare per automatizzare il business"</em>.
+        </p>
+        
+        <p>Il momento di iniziare è adesso. Gli agenti AI non sono più fantascienza, ma strumenti concreti che puoi implementare oggi stesso.</p>
+        
+        <p style="background: var(--secondary); padding: 15px; border-left: 4px solid var(--primary); border-radius: 8px; margin-top: 30px;">
+            <strong>💡 Vuoi implementare agenti AI nella tua azienda?</strong><br>
+            Offro consulenza e sviluppo di soluzioni basate su AI agents per automatizzare processi aziendali complessi. 
+            <a href="../index.html#contact" style="color: var(--primary); font-weight: 600;">Contattami per una consulenza</a>.
+        </p>
+    </article>
+
+    <script>
+        // Dark/Light mode
+        const body = document.body;
+        const btnLight = document.getElementById('mode-light');
+        const btnDark = document.getElementById('mode-dark');
+        
+        // Check saved theme
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+        }
+        
+        btnDark.onclick = () => {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+            localStorage.setItem('theme','dark');
+        };
+        
+        btnLight.onclick = () => {
+            body.classList.remove('dark');
+            btnLight.classList.add('active');
+            btnDark.classList.remove('active');
+            localStorage.setItem('theme','light');
+        };
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
