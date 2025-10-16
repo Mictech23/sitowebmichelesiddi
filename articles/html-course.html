@@ -2,40 +2,283 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corso HTML: crea la tua prima pagina web | Michele Siddi</title>
     <meta name="description" content="Guida pratica per imparare HTML e costruire la tua prima pagina web passo dopo passo.">
+    <meta name="keywords" content="html, html5, corso html, web development, tutorial html">
+    <meta name="author" content="Michele Siddi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+        <button id="mode-light" title="Light mode" class="active"><i class="fa-regular fa-sun"></i></button>
+        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    
     <article class="blog-article">
+        <a href="../index.html#articles" class="back-link" style="display:inline-block; margin-bottom:20px; color:var(--primary); text-decoration:none; font-weight:600;">
+            <i class="fa-solid fa-arrow-left"></i> Torna agli articoli
+        </a>
+        
         <h1>Corso HTML: crea la tua prima pagina web</h1>
-        <p class="date">28 settembre 2025</p>
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="HTML" style="max-width:100%; border-radius:10px;">
+        <p class="date"><i class="fa-solid fa-calendar"></i> 28 settembre 2025 | <i class="fa-solid fa-user"></i> Michele Siddi</p>
+        
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="HTML Development" loading="lazy">
+        
         <p>
-            <strong>HTML</strong> (HyperText Markup Language) è il linguaggio base per creare pagine web. In questa guida costruiremo la tua prima pagina da zero.
+            <strong>HTML</strong> (HyperText Markup Language) è il linguaggio fondamentale per creare pagine web. È la struttura portante di qualsiasi sito internet. 
+            In questa guida pratica costruiremo la tua prima pagina web da zero, imparando passo dopo passo tutti i concetti essenziali.
         </p>
-        <h2>Struttura base di una pagina HTML</h2>
+        
+        <h2>🌐 Cos'è HTML?</h2>
+        <p>HTML non è un linguaggio di programmazione, ma un <strong>linguaggio di markup</strong>. Utilizza dei "tag" per definire la struttura e il contenuto di una pagina web:</p>
+        <ul>
+            <li><strong>Contenuto strutturato:</strong> Titoli, paragrafi, liste, tabelle, form</li>
+            <li><strong>Media:</strong> Immagini, video, audio</li>
+            <li><strong>Collegamenti:</strong> Link tra pagine e risorse esterne</li>
+            <li><strong>Semantica:</strong> Dare significato al contenuto per browser e motori di ricerca</li>
+        </ul>
+        
+        <h2>📝 Struttura base di una pagina HTML</h2>
+        <p>Ogni pagina HTML ha una struttura standard:</p>
         <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="it"&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;La mia prima pagina&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Ciao, mondo!&lt;/h1&gt;
     &lt;p&gt;Benvenuto nella tua prima pagina web.&lt;/p&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-        </code></pre>
-        <h2>Cosa puoi aggiungere?</h2>
+&lt;/html&gt;</code></pre>
+        
+        <h3>Spiegazione degli elementi:</h3>
         <ul>
-            <li>Immagini e link</li>
-            <li>Liste e tabelle</li>
-            <li>Form per raccogliere dati dagli utenti</li>
+            <li><strong>&lt;!DOCTYPE html&gt;:</strong> Dichiara che il documento è HTML5</li>
+            <li><strong>&lt;html&gt;:</strong> Elemento root che contiene tutta la pagina</li>
+            <li><strong>&lt;head&gt;:</strong> Contiene metadati, titolo, link a CSS e JavaScript</li>
+            <li><strong>&lt;meta charset="UTF-8"&gt;:</strong> Specifica la codifica dei caratteri</li>
+            <li><strong>&lt;meta name="viewport"&gt;:</strong> Rende la pagina responsive sui dispositivi mobili</li>
+            <li><strong>&lt;title&gt;:</strong> Il titolo che appare nella tab del browser</li>
+            <li><strong>&lt;body&gt;:</strong> Contiene tutto il contenuto visibile della pagina</li>
         </ul>
+        
+        <h2>🔤 Tag HTML essenziali</h2>
+        
+        <h3>Titoli (Headings)</h3>
+        <p>Ci sono 6 livelli di titoli, da h1 (più importante) a h6:</p>
+        <pre><code>&lt;h1&gt;Titolo principale&lt;/h1&gt;
+&lt;h2&gt;Sottotitolo&lt;/h2&gt;
+&lt;h3&gt;Sezione&lt;/h3&gt;</code></pre>
+        
+        <h3>Paragrafi e testo</h3>
+        <pre><code>&lt;p&gt;Questo è un paragrafo.&lt;/p&gt;
+&lt;p&gt;Testo in &lt;strong&gt;grassetto&lt;/strong&gt; e &lt;em&gt;corsivo&lt;/em&gt;.&lt;/p&gt;
+&lt;br&gt; &lt;!-- Interruzione di riga --&gt;
+&lt;hr&gt; &lt;!-- Linea orizzontale --&gt;</code></pre>
+        
+        <h3>Liste</h3>
+        <p>Liste non ordinate (bullet points) e ordinate (numerate):</p>
+        <pre><code>&lt;!-- Lista non ordinata --&gt;
+&lt;ul&gt;
+  &lt;li&gt;Elemento 1&lt;/li&gt;
+  &lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Lista ordinata --&gt;
+&lt;ol&gt;
+  &lt;li&gt;Primo passo&lt;/li&gt;
+  &lt;li&gt;Secondo passo&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        
+        <h3>Link e immagini</h3>
+        <pre><code>&lt;!-- Link --&gt;
+&lt;a href="https://example.com"&gt;Visita il sito&lt;/a&gt;
+&lt;a href="pagina2.html"&gt;Link interno&lt;/a&gt;
+
+&lt;!-- Immagine --&gt;
+&lt;img src="foto.jpg" alt="Descrizione immagine"&gt;</code></pre>
+        
+        <h3>Divisioni e contenitori</h3>
+        <pre><code>&lt;!-- Div: contenitore generico --&gt;
+&lt;div class="contenitore"&gt;
+  &lt;p&gt;Contenuto&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Span: contenitore inline --&gt;
+&lt;p&gt;Testo con &lt;span style="color: red;"&gt;parola colorata&lt;/span&gt;&lt;/p&gt;</code></pre>
+        
+        <h2>🎨 HTML5 Semantico</h2>
+        <p>HTML5 introduce tag semantici che descrivono il significato del contenuto:</p>
+        <pre><code>&lt;header&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#about"&gt;Chi siamo&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Titolo articolo&lt;/h2&gt;
+    &lt;p&gt;Contenuto dell'articolo...&lt;/p&gt;
+  &lt;/article&gt;
+  
+  &lt;aside&gt;
+    &lt;h3&gt;Sidebar&lt;/h3&gt;
+    &lt;p&gt;Contenuto correlato...&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2025 Il mio sito&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        
+        <h2>📋 Form e input</h2>
+        <p>I form permettono di raccogliere dati dagli utenti:</p>
+        <pre><code>&lt;form action="/submit" method="POST"&gt;
+  &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+  &lt;input type="text" id="nome" name="nome" required&gt;
+  
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+  
+  &lt;label for="messaggio"&gt;Messaggio:&lt;/label&gt;
+  &lt;textarea id="messaggio" name="messaggio" rows="4"&gt;&lt;/textarea&gt;
+  
+  &lt;button type="submit"&gt;Invia&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        
+        <h2>📊 Tabelle</h2>
+        <p>Per visualizzare dati in formato tabellare:</p>
+        <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nome&lt;/th&gt;
+      &lt;th&gt;Età&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mario&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        
+        <h2>🎯 Progetto pratico: Crea la tua prima pagina</h2>
+        <p>Esercizio completo per mettere in pratica quanto appreso:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="it"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Il Mio Portfolio&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Benvenuto nel mio Portfolio&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#about"&gt;Chi sono&lt;/a&gt;
+            &lt;a href="#projects"&gt;Progetti&lt;/a&gt;
+            &lt;a href="#contact"&gt;Contatti&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section id="about"&gt;
+            &lt;h2&gt;Chi sono&lt;/h2&gt;
+            &lt;p&gt;Sono uno sviluppatore web appassionato...&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="projects"&gt;
+            &lt;h2&gt;I miei progetti&lt;/h2&gt;
+            &lt;article&gt;
+                &lt;h3&gt;Progetto 1&lt;/h3&gt;
+                &lt;p&gt;Descrizione del progetto...&lt;/p&gt;
+            &lt;/article&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="contact"&gt;
+            &lt;h2&gt;Contattami&lt;/h2&gt;
+            &lt;form&gt;
+                &lt;input type="email" placeholder="La tua email"&gt;
+                &lt;textarea placeholder="Messaggio"&gt;&lt;/textarea&gt;
+                &lt;button&gt;Invia&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 Il mio nome&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        
+        <h2>💡 Best Practice e consigli</h2>
+        <ul>
+            <li><strong>Usa tag semantici:</strong> Aiuta SEO e accessibilità</li>
+            <li><strong>Indentazione corretta:</strong> Rendi il codice leggibile</li>
+            <li><strong>Attributi alt per le immagini:</strong> Migliora accessibilità e SEO</li>
+            <li><strong>Valida il codice:</strong> Usa il W3C Validator</li>
+            <li><strong>Mobile-first:</strong> Pensa sempre alla versione mobile</li>
+            <li><strong>Commenti:</strong> Usa &lt;!-- commento --&gt; per documentare</li>
+        </ul>
+        
+        <h2>📚 Prossimi passi</h2>
+        <p>Dopo aver imparato HTML, il percorso naturale è:</p>
+        <ol>
+            <li><strong>CSS:</strong> Stilizza le tue pagine (colori, layout, animazioni)</li>
+            <li><strong>JavaScript:</strong> Aggiungi interattività e dinamismo</li>
+            <li><strong>Responsive Design:</strong> Crea layout che funzionano su tutti i dispositivi</li>
+            <li><strong>Frameworks:</strong> Bootstrap, Tailwind per sviluppo rapido</li>
+            <li><strong>SEO:</strong> Ottimizza le pagine per i motori di ricerca</li>
+        </ol>
+        
         <p>
-            <strong>Conclusione:</strong> Imparare HTML è il primo passo per diventare uno sviluppatore web. Prova, sperimenta e crea il tuo sito!
+            <strong>Conclusione:</strong> Imparare HTML è il primo passo fondamentale per diventare uno sviluppatore web. 
+            È semplice da imparare ma potente nelle sue possibilità. Prova, sperimenta e crea il tuo primo sito web oggi stesso!
+        </p>
+        
+        <p style="background: var(--secondary); padding: 15px; border-left: 4px solid var(--primary); border-radius: 8px; margin-top: 30px;">
+            <strong>💡 Vuoi approfondire HTML e CSS?</strong><br>
+            Offro corsi personalizzati per imparare a creare siti web professionali da zero. 
+            <a href="../index.html#contact" style="color: var(--primary); font-weight: 600;">Contattami per iniziare il tuo percorso</a>.
         </p>
     </article>
+
+    <script>
+        // Dark/Light mode
+        const body = document.body;
+        const btnLight = document.getElementById('mode-light');
+        const btnDark = document.getElementById('mode-dark');
+        
+        // Check saved theme
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+        }
+        
+        btnDark.onclick = () => {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+            localStorage.setItem('theme','dark');
+        };
+        
+        btnLight.onclick = () => {
+            body.classList.remove('dark');
+            btnLight.classList.add('active');
+            btnDark.classList.remove('active');
+            localStorage.setItem('theme','light');
+        };
+    </script>
 </body>
 </html>

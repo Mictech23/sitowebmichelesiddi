@@ -3,184 +3,377 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM: Cos’è un Large Language Model? Guida Completa | Michele Siddi IT Expert</title>
+    <title>LLM: Cos'è un Large Language Model? Guida Completa | Michele Siddi</title>
+    <meta name="description" content="Guida completa ai Large Language Model (LLM): scopri cosa sono, come funzionano (architettura Transformer) e le loro applicazioni nello sviluppo software e cybersecurity.">
+    <meta name="keywords" content="LLM, Large Language Model, Intelligenza Artificiale, AI, Transformer, GPT, machine learning">
+    <meta name="author" content="Michele Siddi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
-    <meta name="description" content="Guida completa ai Large Language Model (LLM): scopri cosa sono, come funzionano (architettura Transformer) e le loro applicazioni nello Sviluppo Software e Cybersecurity.">
-
-    <meta name="keywords" content="LLM, Large Language Model, Intelligenza Artificiale, AI, Sviluppo Software, Cybersecurity, Transformer, Modelli Linguistici">
-
-    <link rel="canonical" href="[IL TUO URL REALE DELL'ARTICOLO QUI]">
-
-    <meta property="og:title" content="LLM: Cos’è un Large Language Model? Guida Completa">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="[IL TUO URL REALE DELL'ARTICOLO QUI]">
-
-    <link rel="stylesheet" href="style.css"> 
-    
-    </head>
+</head>
 <body>
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+        <button id="mode-light" title="Light mode" class="active"><i class="fa-regular fa-sun"></i></button>
+        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    
+    <article class="blog-article">
+        <a href="../index.html#articles" class="back-link" style="display:inline-block; margin-bottom:20px; color:var(--primary); text-decoration:none; font-weight:600;">
+            <i class="fa-solid fa-arrow-left"></i> Torna agli articoli
+        </a>
+        
+        <h1>🤖 LLM: Cos'è un Large Language Model e Come Sta Cambiando il Digitale</h1>
+        <p class="date"><i class="fa-solid fa-calendar"></i> 8 ottobre 2025 | <i class="fa-solid fa-user"></i> Michele Siddi</p>
+        
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80" alt="Large Language Models" loading="lazy">
+        
+        <section id="introduzione">
+            <h2>Introduzione: Il Cervello Digitale del Futuro</h2>
+            <p>
+                Nell'era dell'Intelligenza Artificiale, un termine è sulla bocca di tutti: <strong>LLM</strong> (Large Language Model), 
+                ovvero Modello Linguistico di Grandi Dimensioni. Ma cosa si nasconde dietro questo acronimo?
+            </p>
+            
+            <p>
+                Un LLM è molto più di un semplice programma in grado di "parlare". È il <strong>motore che alimenta i chatbot, gli assistenti virtuali 
+                e gli strumenti di generazione di testo</strong> che stanno ridefinendo il modo in cui lavoriamo e interagiamo con la tecnologia.
+            </p>
+            
+            <p>
+                In questo articolo, esploreremo in dettaglio cosa sono gli LLM, come funzionano e perché la loro ascesa rappresenta una svolta fondamentale 
+                per lo sviluppo software e la cybersecurity.
+            </p>
+        </section>
 
-    <main id="article-content">
-        <article>
-            <header>
-                <h1>🤖 LLM: Cos'è un Large Language Model e Come Sta Cambiando il Digitale</h1>
-                <p class="article-meta">Pubblicato da Michele Siddi | Categoria: Intelligenza Artificiale | Data: 13 Ottobre 2025</p>
-            </header>
+        <section id="definizione">
+            <h2>1. 📖 La Definizione Semplice: Un "Lettore" e "Scrittore" Gigante</h2>
+            <p>
+                Un <strong>Large Language Model</strong> è un tipo di algoritmo di intelligenza artificiale addestrato su una <strong>quantità massiva di dati testuali</strong> 
+                (miliardi di parole, libri, articoli, pagine web).
+            </p>
+            
+            <p>
+                <strong>Il suo obiettivo primario non è "capire" come un umano, ma prevedere la parola successiva in una sequenza.</strong>
+            </p>
+            
+            <p>Questo processo di previsione incredibilmente accurato gli permette di:</p>
+            <ul>
+                <li>Generare testi coerenti, fluidi e stilisticamente appropriati</li>
+                <li>Tradurre tra lingue diverse con alta precisione</li>
+                <li>Riassumere documenti complessi mantenendo le informazioni chiave</li>
+                <li>Rispondere a domande basate su informazioni apprese durante il training</li>
+                <li>Scrivere codice in diversi linguaggi di programmazione</li>
+                <li>Analizzare sentiment e tono emotivo del testo</li>
+            </ul>
+            
+            <h3>Esempio Pratico</h3>
+            <p>
+                Pensa a un completamento automatico estremamente avanzato. Se scrivi "Il cielo è...", l'LLM ha imparato che le parole statisticamente 
+                più probabili a seguire sono "blu", "nuvoloso", "sereno", ecc., e sceglie la più adatta al contesto della conversazione.
+            </p>
+            
+            <p>
+                In sostanza, un LLM è un modello matematico così vasto e complesso da aver "imparato" la struttura, la sintassi, la semantica e 
+                persino le sfumature culturali del linguaggio. Non si limita a cercare parole chiave, ma predice la sequenza di parole più probabile 
+                e sensata in un dato contesto.
+            </p>
+        </section>
 
-            <section id="introduzione">
-                <h2>Introduzione: Il Cervello Digitale del Futuro</h2>
-                <p>Nell'era dell'Intelligenza Artificiale, un termine è sulla bocca di tutti: <strong>LLM</strong> (Large Language Model), ovvero Modello Linguistico di Grandi Dimensioni. Ma cosa si nasconde dietro questo acronimo?</p>
-                <p>Un LLM è molto più di un semplice programma in grado di "parlare". È il <strong>motore che alimenta i chatbot, gli assistenti virtuali e gli strumenti di generazione di testo</strong> che stanno ridefinendo il modo in cui lavoriamo e interagiamo con la tecnologia.</p>
-                <p>In questo articolo, esploreremo in dettaglio cosa sono gli LLM, come funzionano e perché la loro ascesa rappresenta una svolta fondamentale per lo sviluppo software e la cybersecurity.</p>
-            </section>
+        <section id="funzionamento">
+            <h2>2. 🧠 Come Funzionano gli LLM: Architettura e Training</h2>
+            
+            <h3>2.1 Architettura di Base: Il Transformer</h3>
+            <p>
+                La magia degli LLM risiede nell'architettura delle <strong>reti neurali profonde</strong>, in particolare l'architettura <strong>Transformer</strong>, 
+                introdotta da Google nel 2017 nel paper "Attention is All You Need".
+            </p>
+            
+            <div style="background: var(--secondary); padding: 20px; border-radius: 12px; margin: 20px 0;">
+                <h4>🎯 Il Meccanismo di Attention (Attenzione)</h4>
+                <p>
+                    I Transformer utilizzano un meccanismo chiamato <strong>"Self-Attention"</strong>. Questo permette al modello di pesare l'importanza 
+                    delle diverse parole nella frase (e nel contesto circostante) durante la generazione del testo.
+                </p>
+                
+                <p><strong>Esempio:</strong></p>
+                <p>
+                    Se chiedi a un LLM di riassumere un libro, il meccanismo di Attenzione gli permette di concentrarsi sui nomi dei personaggi principali 
+                    e sugli eventi chiave, ignorando le descrizioni meno rilevanti.
+                </p>
+                
+                <p>
+                    Prima del Transformer, i modelli faticavano a gestire le dipendenze a lungo raggio nel testo. Il Transformer risolve questo problema 
+                    assegnando un "peso" o punteggio di attenzione a ogni parola dell'input, permettendo al modello di capire quali parole sono più 
+                    rilevanti per il contesto attuale.
+                </p>
+            </div>
+            
+            <h3>2.2 Token e Vettori: La Matematica del Linguaggio</h3>
+            <p>Gli LLM non elaborano le parole come le intendiamo noi, ma lavorano con i <strong>token</strong>.</p>
+            
+            <h4>Cos'è un Token?</h4>
+            <p>
+                Un token è la più piccola unità di linguaggio che il modello può processare. Può essere:
+            </p>
+            <ul>
+                <li>Una parola intera ("casa")</li>
+                <li>Una parte di parola ("anti-", "-mente")</li>
+                <li>Un segno di punteggiatura (",", ".")</li>
+                <li>Caratteri speciali o numeri</li>
+            </ul>
+            
+            <h4>Embeddings: Trasformare parole in numeri</h4>
+            <p>Ogni token viene convertito in un <strong>vettore numerico</strong> ad alta dimensionalità (tipicamente 768, 1024 o 4096 dimensioni):</p>
+            <ul>
+                <li><strong>Vettorizzazione:</strong> Ogni token diventa un array di numeri</li>
+                <li><strong>Spazio semantico:</strong> Token con significati simili hanno vettori vicini tra loro</li>
+                <li><strong>Contesto dinamico:</strong> L'embedding cambia in base al contesto della frase</li>
+            </ul>
+            
+            <p>
+                Questo permette operazioni matematiche sul linguaggio. Ad esempio: <code>Re - Uomo + Donna ≈ Regina</code>
+            </p>
+            
+            <h3>2.3 Il Processo di Addestramento</h3>
+            <p>L'addestramento di un LLM avviene in tre fasi principali:</p>
+            
+            <h4>Fase 1: Pre-training (Pre-addestramento)</h4>
+            <p>Il modello viene esposto a una quantità enorme di dati non etichettati:</p>
+            <ul>
+                <li><strong>Dataset:</strong> Trilioni di token da libri, web, articoli scientifici, codice</li>
+                <li><strong>Obiettivo:</strong> Imparare la struttura del linguaggio predicendo la parola successiva</li>
+                <li><strong>Durata:</strong> Settimane o mesi su cluster GPU/TPU massivi</li>
+                <li><strong>Costo:</strong> Milioni di dollari per modelli all'avanguardia</li>
+            </ul>
+            
+            <h4>Fase 2: Fine-Tuning (Affinamento)</h4>
+            <p>Il modello viene specializzato su task specifici:</p>
+            <ul>
+                <li>Addestramento su dataset curati di alta qualità</li>
+                <li>Esempi di interazioni umane ottimali</li>
+                <li>Insegnamento a seguire istruzioni</li>
+                <li>Specializzazione per domini specifici (medico, legale, tecnico)</li>
+            </ul>
+            
+            <h4>Fase 3: RLHF (Reinforcement Learning from Human Feedback)</h4>
+            <p>L'allineamento ai valori umani:</p>
+            <ul>
+                <li><strong>Classificazione umana:</strong> Annotatori valutano le risposte del modello</li>
+                <li><strong>Reward Model:</strong> Creazione di un modello che predice le preferenze umane</li>
+                <li><strong>Ottimizzazione:</strong> Il modello impara a massimizzare le risposte preferite dagli umani</li>
+                <li><strong>Risultato:</strong> Risposte più utili, oneste e inoffensive</li>
+            </ul>
+        </section>
 
-            <section id="definizione-semplice">
-                <h2>1. La Definizione Semplice: Un "Lettore" e "Scrittore" Gigante</h2>
-                <p>Un <strong>Large Language Model</strong> è un tipo di algoritmo di intelligenza artificiale addestrato su una <strong>quantità massiva di dati testuali</strong> (miliardi di parole, libri, articoli, pagine web).</p>
-                <p><strong>Il suo obiettivo primario non è "capire" come un umano, ma prevedere la parola successiva in una sequenza.</strong></p>
-                <p>Questo processo di previsione incredibilmente accurato gli permette di:</p>
-                <ul>
-                    <li>Generare testi coerenti, fluidi e stilisticamente appropriati.</li>
-                    <li>Tradurre lingue diverse.</li>
-                    <li>Riassumere documenti complessi.</li>
-                    <li>Rispondere a domande basate su informazioni apprese.</li>
-                </ul>
-                <p><strong>Esempio:</strong> Pensa a un completamento automatico avanzatissimo. Se scrivi "Il cielo è...", l'LLM ha imparato che le parole statisticamente più probabili a seguire sono "blu", "nuvoloso", "sereno", ecc., e sceglie la più adatta al contesto.In sostanza, un LLM è un modello matematico così vasto e complesso da aver "imparato" la struttura, la sintassi, la semantica e persino le sfumature culturali del linguaggio. Non si limita a cercare parole chiave, ma predice la sequenza di parole più probabile e sensata in un dato contesto, permettendo così una conversazione fluida, la creazione di testi e la risoluzione di problemi. </p>
-            </section>
+        <section id="modelli-famosi">
+            <h2>3. 🌟 I Modelli LLM Più Famosi</h2>
+            
+            <h3>GPT (Generative Pre-trained Transformer) - OpenAI</h3>
+            <ul>
+                <li><strong>GPT-3:</strong> 175 miliardi di parametri, rivoluzionario nel 2020</li>
+                <li><strong>GPT-4:</strong> Multimodale (testo + immagini), ragionamento avanzato</li>
+                <li><strong>GPT-4o:</strong> Ottimizzato per velocità e costo, eccellente per produzione</li>
+                <li><strong>Uso:</strong> ChatGPT, API per sviluppatori, Microsoft Copilot</li>
+            </ul>
+            
+            <h3>Claude - Anthropic</h3>
+            <ul>
+                <li>Focus su sicurezza e allineamento ai valori umani</li>
+                <li>Eccellente per analisi di documenti lunghi (200K+ token di contesto)</li>
+                <li>Particolarmente bravo in task di reasoning e coding</li>
+            </ul>
+            
+            <h3>Llama - Meta</h3>
+            <ul>
+                <li>Open source, può essere eseguito localmente</li>
+                <li>Llama 2: fino a 70 miliardi di parametri</li>
+                <li>Llama 3: Performance competitive con modelli proprietari</li>
+                <li>Ideale per chi vuole controllo totale e privacy</li>
+            </ul>
+            
+            <h3>Gemini - Google</h3>
+            <ul>
+                <li>Multimodale nativo (testo, immagini, audio, video)</li>
+                <li>Integrato in Google Workspace e Search</li>
+                <li>Ottimizzato per task di ricerca e analisi</li>
+            </ul>
+        </section>
 
-            <section id="funzionamento-tecnico">
-                <h2>2. 1. Architettura di Base: Il Cuore del Modello</h2>
-                <p>La magia degli LLM risiede nell'architettura delle <strong>reti neurali profonde</strong>, in particolare l'architettura <strong>Transformer</strong>, introdotta da Google.</p>
+        <section id="applicazioni">
+            <h2>4. 💼 Applicazioni Pratiche degli LLM</h2>
+            
+            <h3>Sviluppo Software</h3>
+            <ul>
+                <li><strong>Code generation:</strong> GitHub Copilot, Cursor, Replit AI</li>
+                <li><strong>Code review:</strong> Analisi automatica di codice per bug e miglioramenti</li>
+                <li><strong>Documentazione:</strong> Generazione automatica di commenti e docs</li>
+                <li><strong>Testing:</strong> Creazione di test case e debugging assistito</li>
+                <li><strong>Refactoring:</strong> Miglioramento e ottimizzazione codice legacy</li>
+            </ul>
+            
+            <h3>Business e Produttività</h3>
+            <ul>
+                <li><strong>Customer service:</strong> Chatbot intelligenti 24/7</li>
+                <li><strong>Content creation:</strong> Articoli, email, social media posts</li>
+                <li><strong>Analisi dati:</strong> Interpretazione e insights da dataset complessi</li>
+                <li><strong>Ricerca e sintesi:</strong> Riassunti di documenti e report</li>
+                <li><strong>Translation:</strong> Traduzione multilingua di alta qualità</li>
+            </ul>
+            
+            <h3>Cybersecurity</h3>
+            <ul>
+                <li><strong>Threat detection:</strong> Analisi log e identificazione anomalie</li>
+                <li><strong>Vulnerability analysis:</strong> Scansione codice per vulnerabilità</li>
+                <li><strong>Security documentation:</strong> Policy e procedure di sicurezza</li>
+                <li><strong>Phishing detection:</strong> Analisi email e messaggi sospetti</li>
+                <li><strong>Incident response:</strong> Assistenza nella gestione incidenti</li>
+            </ul>
+            
+            <h3>Educazione e Formazione</h3>
+            <ul>
+                <li>Tutor personalizzati per apprendimento</li>
+                <li>Generazione di quiz e esercizi</li>
+                <li>Spiegazioni semplificate di concetti complessi</li>
+                <li>Feedback su scrittura e composizione</li>
+            </ul>
+        </section>
 
-                <div id="transformer-architecture">
-                    <h3>🧠 Architettura Transformer:</h3>
-                    <p>I Transformer utilizzano un meccanismo chiamato <strong>"Attention" (Attenzione)</strong>. Questo meccanismo permette al modello di pesare l'importanza delle diverse parole nella frase (e nel contesto circostante) durante la generazione del testo.</p>
-                    <p><strong>Esempio:</strong> Se chiedi a un LLM di riassumere un libro, il meccanismo di Attenzione gli permette di concentrarsi sui nomi dei personaggi principali e sugli eventi chiave, ignorando le descrizioni meno rilevanti. Il Ruolo del Transformer e dell'Attention 🧠
-Il cuore di ogni Large Language Model è l'architettura Transformer, introdotta da Google nel 2017. Prima del Transformer, i modelli faticavano a gestire le dipendenze a lungo raggio nel testo, ovvero capire come una frase all'inizio di un paragrafo influenza la coerenza del testo successivo.
+        <section id="limiti">
+            <h2>5. ⚠️ Limiti e Sfide degli LLM</h2>
+            
+            <h3>Allucinazioni</h3>
+            <p>
+                Gli LLM possono "inventare" informazioni che sembrano plausibili ma sono false. Questo perché:
+            </p>
+            <ul>
+                <li>Predicono parole probabili, non verificano fatti</li>
+                <li>Non hanno accesso a informazioni in tempo reale (senza integrazioni)</li>
+                <li>Possono confondere informazioni simili</li>
+            </ul>
+            
+            <h3>Bias e Fairness</h3>
+            <ul>
+                <li>I modelli riflettono i bias presenti nei dati di training</li>
+                <li>Possono perpetuare stereotipi e discriminazioni</li>
+                <li>Necessità di valutazione continua e mitigazione</li>
+            </ul>
+            
+            <h3>Privacy e Sicurezza</h3>
+            <ul>
+                <li>Rischio di memorizzazione e riproduzione di dati sensibili</li>
+                <li>Possibilità di jailbreak e prompt injection</li>
+                <li>Necessità di controlli di accesso robusti</li>
+            </ul>
+            
+            <h3>Costi e Sostenibilità</h3>
+            <ul>
+                <li>Training richiede energia e risorse massicce</li>
+                <li>Inferenza può essere costosa su larga scala</li>
+                <li>Impatto ambientale significativo</li>
+            </ul>
+            
+            <h3>Limiti di Contesto</h3>
+            <ul>
+                <li>Window limitato (anche se in crescita: 128K, 200K token)</li>
+                <li>Difficoltà con ragionamento su periodi molto lunghi</li>
+                <li>Lost in the middle problem (informazioni al centro vengono ignorate)</li>
+            </ul>
+        </section>
 
-Il Transformer ha risolto questo problema attraverso il meccanismo di Self-Attention (Auto-Attenzione):
+        <section id="futuro">
+            <h2>6. 🔮 Il Futuro degli LLM</h2>
+            
+            <h3>Tendenze Emergenti</h3>
+            
+            <h4>Modelli Multimodali</h4>
+            <p>LLM che processano testo, immagini, audio e video insieme:</p>
+            <ul>
+                <li>GPT-4 Vision, Gemini Ultra</li>
+                <li>Comprensione più profonda del contesto</li>
+                <li>Nuove applicazioni creative e professionali</li>
+            </ul>
+            
+            <h4>Modelli Specializzati</h4>
+            <p>LLM ottimizzati per domini specifici:</p>
+            <ul>
+                <li>Med-PaLM per medicina</li>
+                <li>CodeLlama per programmazione</li>
+                <li>BloombergGPT per finanza</li>
+            </ul>
+            
+            <h4>Edge LLM</h4>
+            <p>Modelli che girano su dispositivi locali:</p>
+            <ul>
+                <li>Privacy completa (dati non lasciano il dispositivo)</li>
+                <li>Latenza ridotta</li>
+                <li>Funzionamento offline</li>
+            </ul>
+            
+            <h4>LLM come Sistema Operativo</h4>
+            <p>Gli LLM diventeranno l'interfaccia principale per:</p>
+            <ul>
+                <li>Interagire con software e servizi</li>
+                <li>Orchestrare workflow complessi</li>
+                <li>Automatizzare task multi-step</li>
+            </ul>
+        </section>
 
-Per generare la parola successiva in una frase, il modello non guarda solo le parole immediatamente precedenti, ma assegna un "peso" o un punteggio di attenzione a ogni parola dell'input. Questo permette al modello di capire quali parole sono le più rilevanti per il contesto attuale, gestendo efficacemente le dipendenze semantiche a lunga distanza, cruciali per la coerenza del testo.
+        <h2>🎯 Conclusione</h2>
+        <p>
+            I Large Language Models rappresentano uno dei progressi più significativi nell'intelligenza artificiale degli ultimi anni. 
+            Non sono solo strumenti per generare testo, ma veri e propri "cervelli digitali" capaci di comprendere, ragionare e creare 
+            in modi che stavano cambiando radicalmente il nostro rapporto con la tecnologia.
+        </p>
+        
+        <p>
+            Per sviluppatori, professionisti IT e chiunque lavori nel digitale, comprendere gli LLM non è più opzionale: è essenziale. 
+            Questi modelli stanno ridefinendo cosa significa programmare, creare contenuti, analizzare dati e interagire con i clienti.
+        </p>
+        
+        <p>
+            La chiave è utilizzarli con consapevolezza: sfruttarne le potenzialità incredibili, ma essere sempre critici sui loro limiti 
+            e attenti alle implicazioni etiche e di privacy.
+        </p>
+        
+        <p>
+            Il futuro è qui, e parla la lingua degli LLM. È il momento di imparare a dialogare con questi nuovi "cervelli digitali" 
+            e di costruire la prossima generazione di applicazioni intelligenti.
+        </p>
+        
+        <p style="background: var(--secondary); padding: 15px; border-left: 4px solid var(--primary); border-radius: 8px; margin-top: 30px;">
+            <strong>💡 Vuoi integrare gli LLM nelle tue applicazioni?</strong><br>
+            Offro consulenza e sviluppo di soluzioni basate su LLM per automazione, analisi dati e customer experience. 
+            <a href="../index.html#contact" style="color: var(--primary); font-weight: 600;">Contattami per una consulenza</a>.
+        </p>
+    </article>
 
-In termini tecnici, il Transformer elabora input e output in parallelo, superando i limiti di sequenzialità delle precedenti architetture (come le Reti Neurali Ricorrenti - RNN), rendendo l'addestramento e la generazione molto più efficienti.
-
-Token e Vettori: La Matematica del Linguaggio
-Gli LLM non elaborano le parole come le intendiamo noi, ma lavorano con i token. Un token è la più piccola unità di linguaggio che il modello può processare; può essere una parola intera, una parte di parola (una radice o un suffisso), o un segno di punteggiatura.
-
-La magia avviene con gli Embeddings (Vettori di Incorporamento):
-
-Vettorizzazione: Ogni token viene convertito in un vettore numerico ad alta dimensionalità.
-
-Significato Semantico: Questi vettori sono disposti in uno "spazio semantico" dove i token con significati simili si trovano più vicini tra loro, e la distanza tra di essi codifica le relazioni linguistiche.
-
-Contesto: L'architettura Transformer modifica dinamicamente l'embedding del token, incorporando il contesto della frase grazie all'Attention. Questo permette al modello di distinguere tra i diversi significati di una parola a seconda della frase in cui si trova.
-
-La generazione di testo è, quindi, un processo probabilistico in cui l'LLM calcola, in ogni fase, il token con la maggiore probabilità statistica di seguire la sequenza data. </p>
-                </div>
-
-                <div id="training-process">
-                    <h3>🛠️ Il Processo di Addestramento: Dall'Apprendimento Massivo all'Allineamento Umano</h3>
-                    <p>L'addestramento avviene in tre fasi principali:</p>
-                    <ol>
-                        <li><strong>Pre-addestramento (Pre-training):</strong> Il modello viene esposto a una quantità enorme di dati non etichettati per apprendere la grammatica, la sintassi e le informazioni di base del mondo.Questa è la fase più costosa e lunga. L'LLM viene addestrato su un dataset massivo e non etichettato, che include trilioni di token provenienti da: libri, fonti accademiche, vaste sezioni del web e codice sorgente.</li>
-                        <li><strong>Fine-Tuning:</strong> Il modello viene addestrato su dati specifici (es. conversazioni) per affinare le sue abilità e renderlo utile per compiti specifici (come rispondere a domande o scrivere codice).Ad esempio, dato "La capitale della Francia è...", il modello impara che il token più probabile è "Parigi". Questo processo insegna una padronanza statistica delle relazioni linguistiche e fattuali.</li>
-                        <li><strong>RLHF (Reinforcement Learning from Human Feedback):</strong> Gli umani classificano le risposte del modello. Questo feedback aiuta l'LLM a imparare quali risposte sono migliori, più utili e meno dannose.Dopo il pre-training, il modello è erudito ma può risultare goffo o generare contenuti potenzialmente dannosi. Il Fine-tuning serve a raffinare le sue capacità e ad allinearlo ai valori umani e alle istruzioni specifiche.
-
-Supervised Fine-Tuning (SFT): Il modello viene addestrato su un dataset più piccolo, di alta qualità, contenente esempi di interazioni umane ottimali. Questo insegna al modello a seguire le istruzioni e a rispondere in modo pertinente e conciso.
-
-Reinforcement Learning from Human Feedback (RLHF): Questa fase è cruciale per l'allineamento etico e comportamentale.
-
-Gli annotatori umani classificano diverse risposte generate dall'LLM per una data richiesta.
-
-Queste classifiche vengono utilizzate per addestrare un Reward Model (Modello di Ricompensa).
-
-L'LLM viene infine addestrato per massimizzare il punteggio dato dal Reward Model, imparando così a fornire risposte che gli esseri umani preferiscono (utili, inoffensive e oneste).
-
-Il risultato è un modello che non solo conosce i fatti (Pre-training), ma sa anche come comunicarli in modo etico e su richiesta (Allineamento).</li>
-                    </ol>
-                </div>
-            </section>
-
-            <section id="applicazioni-reali">
-                <h2>3. </h2>
-                <p>La tecnologia LLM non è una semplice curiosità, ma un pilastro della moderna trasformazione digitale. Ecco alcuni campi in cui la sua applicazione è rivoluzionaria:</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Settore</th>
-                            <th>Applicazione dell'LLM</th>
-                            <th>Vantaggio Chiave</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Sviluppo Software</strong></td>
-                            <td>Generazione automatica di codice, debug, documentazione.</td>
-                            <td>Aumento della velocità di sviluppo e riduzione degli errori.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Customer Service</strong></td>
-                            <td>Chatbot intelligenti (come il mio assistente AI!) e risposte immediate.</td>
-                            <td>Riduzione dei costi operativi e disponibilità 24/7.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Analisi Dati</strong></td>
-                            <td>Estrazione di informazioni chiave da documenti e report non strutturati.</td>
-                            <td>Decisioni aziendali più rapide e informate.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cybersecurity</strong></td>
-                            <td>Analisi di log di sicurezza, individuazione di <em>phishing</em> e minacce.</td>
-                            <td>Identificazione più rapida e proattiva di vulnerabilità.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="conclusione">
-                <h2>Conclusione: Preparati all'Innovazione</h2>
-                <p>Gli LLM come GPT (OpenAI), Gemini (Google) e altri modelli <em>open-source</em> sono strumenti incredibilmente potenti. Saperli integrare nelle strategie digitali è oggi un <em>must</em>.</p>
-                <p>Come <strong>Software Engineer</strong> e <strong>IT Expert</strong>, la mia missione è proprio quella di trasformare questa tecnologia d'avanguardia in <strong>soluzioni concrete e sicure</strong> per aziende e professionisti.</p>
-            </section>
-
-            <section id="call-to-action">
-                <h2>💡 Limiti e Sfide: Dove l'LLM Ancora Incontra Difficoltà</h2>
-                <p>Nonostante la loro potenza, gli LLM presentano limitazioni che ne richiedono un uso attento, soprattutto in ambienti professionali.
-
-A. Le "Allucinazioni" (Hallucinations)
-Questo è il limite più critico: l'LLM genera una risposta fattualmente errata o inventata (una "allucinazione"), presentandola con tono autorevole. Questo succede perché il modello è ottimizzato per la plausibilità linguistica (la sequenza di parole più probabile), non per la verità oggettiva.
-
-B. Bias e Tossicità
-I modelli ereditano i pregiudizi (bias) e gli stereotipi presenti nei miliardi di dati su cui sono stati addestrati (il web). Sebbene l'RLHF mitighi questi problemi, l'eliminazione completa del bias è una sfida continua, poiché i dati di partenza riflettono inevitabilmente la società.
-
-C. Limiti Contestuali e Finestra di Contesto
-Gli LLM operano con una Finestra di Contesto (Context Window) limitata. Tutto ciò che viene detto al di fuori di questa "memoria" temporanea viene dimenticato. Inoltre, l'addestramento e il fine-tuning di questi modelli richiedono enormi risorse computazionali (GPU) e consumo energetico.
-
-D. Trasparenza e Interpretazione (Black Box)
-Nonostante l'architettura sia nota, il funzionamento interno della rete neurale è così complesso da rendere quasi impossibile tracciare perché il modello sia arrivato a una specifica risposta. Funziona come una scatola nera (Black Box), un aspetto problematico per l'audit e l'uso in contesti critici.
-
-Conclusione: La Strada Verso il Futuro 💡
-I Large Language Models hanno ridefinito l'interazione uomo-macchina. Per lo sviluppatore e il professionista IT, l'LLM non è un sostituto, ma uno strumento di moltiplicazione della produttività, a patto di conoscerne i principi e i limiti.
-
-La direzione dell'evoluzione è chiara:
-
-Agenti AI: La prossima frontiera è l'LLM capace di interagire con strumenti esterni (navigare sul web, usare API, eseguire codice) per superare i limiti di conoscenza statica.
-
-Modelli Multimodali: LLM che non elaborano solo testo, ma anche immagini, audio e video, fondendo il linguaggio con la percezione sensoriale del mondo.
-
-L'era degli LLM è appena iniziata, e la nostra capacità di comprenderli ne determinerà il successo e l'impatto sul futuro della tecnologia e del business.</p>
-                <a href="#contact" class="cta-button">Contattami per una consulenza IT ➡️</a>
-            </section>
-
-            <footer>
-                <p class="tags"><strong>Tag:</strong> LLM, Large Language Model, Intelligenza Artificiale, AI, ChatGPT, Tecnologia, Sviluppo Software, Cybersecurity</p>
-                <hr>
-                <p><small>Copyright © 2025 Michele Siddi. Tutti i diritti riservati.</small></p>
-            </footer>
-
-        </article>
-    </main>
-
-    </body>
+    <script>
+        // Dark/Light mode
+        const body = document.body;
+        const btnLight = document.getElementById('mode-light');
+        const btnDark = document.getElementById('mode-dark');
+        
+        // Check saved theme
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+        }
+        
+        btnDark.onclick = () => {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+            localStorage.setItem('theme','dark');
+        };
+        
+        btnLight.onclick = () => {
+            body.classList.remove('dark');
+            btnLight.classList.add('active');
+            btnDark.classList.remove('active');
+            localStorage.setItem('theme','light');
+        };
+    </script>
+</body>
 </html>

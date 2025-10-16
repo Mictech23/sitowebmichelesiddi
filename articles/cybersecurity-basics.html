@@ -2,41 +2,115 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cybersecurity: i concetti base | Michele Siddi</title>
     <meta name="description" content="Guida ai concetti base della cybersecurity: proteggi i tuoi dati e la tua azienda dalle minacce informatiche.">
+    <meta name="keywords" content="cybersecurity, sicurezza informatica, protezione dati, minacce informatiche">
+    <meta name="author" content="Michele Siddi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+        <button id="mode-light" title="Light mode" class="active"><i class="fa-regular fa-sun"></i></button>
+        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    
     <article class="blog-article">
+        <a href="../index.html#articles" class="back-link" style="display:inline-block; margin-bottom:20px; color:var(--primary); text-decoration:none; font-weight:600;">
+            <i class="fa-solid fa-arrow-left"></i> Torna agli articoli
+        </a>
+        
         <h1>Cybersecurity: i concetti base</h1>
-        <p class="date">5 ottobre 2025</p>
-        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity" style="max-width:100%; border-radius:10px;">
+        <p class="date"><i class="fa-solid fa-calendar"></i> 5 ottobre 2025 | <i class="fa-solid fa-user"></i> Michele Siddi</p>
+        
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity" loading="lazy">
+        
         <p>
-            La <strong>cybersecurity</strong> è l’insieme di tecniche e processi per proteggere sistemi, reti e dati da attacchi informatici, furti e danni.
+            La <strong>cybersecurity</strong> è l'insieme di tecniche e processi per proteggere sistemi, reti e dati da attacchi informatici, furti e danni. 
+            In un mondo sempre più connesso, la sicurezza informatica è diventata una priorità assoluta per aziende e privati.
         </p>
-        <h2>Concetti chiave</h2>
+        
+        <h2>🔐 Concetti chiave: la Triade CIA</h2>
+        <p>La sicurezza informatica si basa su tre pilastri fondamentali, conosciuti come la <strong>Triade CIA</strong>:</p>
         <ul>
-            <li><strong>Confidenzialità:</strong> Garantire che solo chi è autorizzato acceda alle informazioni.</li>
-            <li><strong>Integrità:</strong> Proteggere i dati da modifiche non autorizzate.</li>
-            <li><strong>Disponibilità:</strong> Assicurare che servizi e dati siano sempre accessibili quando servono.</li>
+            <li><strong>Confidenzialità (Confidentiality):</strong> Garantire che solo chi è autorizzato possa accedere alle informazioni sensibili. Questo include l'uso di crittografia, autenticazione a più fattori e controlli di accesso rigorosi.</li>
+            <li><strong>Integrità (Integrity):</strong> Proteggere i dati da modifiche non autorizzate o accidentali. I dati devono rimanere accurati e affidabili durante tutto il loro ciclo di vita.</li>
+            <li><strong>Disponibilità (Availability):</strong> Assicurare che servizi e dati siano sempre accessibili quando necessario agli utenti autorizzati, proteggendo i sistemi da interruzioni e attacchi che potrebbero renderli inutilizzabili.</li>
         </ul>
-        <h2>Minacce comuni</h2>
+        
+        <h2>⚠️ Minacce comuni nel 2025</h2>
+        <p>Il panorama delle minacce informatiche è in continua evoluzione. Ecco le più diffuse:</p>
         <ul>
-            <li>Malware (virus, trojan, ransomware)</li>
-            <li>Phishing (truffe via email o web)</li>
-            <li>Attacchi DDoS (sovraccarico dei sistemi)</li>
-            <li>Furto di password e dati sensibili</li>
+            <li><strong>Malware:</strong> Software dannoso che include virus, trojan, ransomware e spyware. Il ransomware, in particolare, cripta i dati e richiede un riscatto per il loro recupero.</li>
+            <li><strong>Phishing e Social Engineering:</strong> Tecniche di inganno via email, SMS o chiamate per ottenere informazioni sensibili o accesso ai sistemi.</li>
+            <li><strong>Attacchi DDoS:</strong> Sovraccarico intenzionale dei sistemi per renderli inaccessibili agli utenti legittimi.</li>
+            <li><strong>Furto di credenziali:</strong> Password e dati sensibili rubati attraverso data breach, keylogger o attacchi di forza bruta.</li>
+            <li><strong>Vulnerabilità Zero-Day:</strong> Falle di sicurezza sconosciute che vengono sfruttate prima che venga rilasciata una patch.</li>
         </ul>
-        <h2>Come proteggersi</h2>
+        
+        <h2>🛡️ Come proteggersi: Best Practice</h2>
+        <p>Implementare buone pratiche di sicurezza è essenziale per ridurre i rischi:</p>
         <ul>
-            <li>Usa password forti e uniche</li>
-            <li>Aggiorna regolarmente software e sistemi</li>
-            <li>Fai backup dei dati</li>
-            <li>Forma il personale sulla sicurezza</li>
+            <li><strong>Password forti e uniche:</strong> Utilizza password complesse (almeno 12 caratteri, con maiuscole, minuscole, numeri e simboli) e diverse per ogni account. Considera l'uso di un password manager.</li>
+            <li><strong>Autenticazione a due fattori (2FA):</strong> Aggiungi un ulteriore livello di sicurezza richiedendo un secondo metodo di verifica oltre alla password.</li>
+            <li><strong>Aggiornamenti regolari:</strong> Mantieni sempre aggiornati software, sistemi operativi e applicazioni per correggere le vulnerabilità di sicurezza.</li>
+            <li><strong>Backup regolari:</strong> Effettua backup frequenti dei dati importanti e conservali in posizioni sicure e separate (regola 3-2-1: 3 copie, 2 supporti diversi, 1 offsite).</li>
+            <li><strong>Formazione del personale:</strong> La maggior parte degli attacchi ha successo a causa dell'errore umano. Forma il team sulla sicurezza e sulle minacce attuali.</li>
+            <li><strong>Firewall e Antivirus:</strong> Utilizza soluzioni di sicurezza moderne e mantienile aggiornate.</li>
+            <li><strong>Principio del minimo privilegio:</strong> Concedi agli utenti solo i permessi strettamente necessari per svolgere il loro lavoro.</li>
         </ul>
+        
+        <h2>💼 Cybersecurity per le aziende</h2>
+        <p>Le organizzazioni devono adottare un approccio strutturato alla sicurezza:</p>
+        <ul>
+            <li>Condurre <strong>assessment di sicurezza</strong> regolari per identificare vulnerabilità</li>
+            <li>Implementare un <strong>piano di risposta agli incidenti</strong> per gestire eventuali breach</li>
+            <li>Conformarsi alle <strong>normative</strong> applicabili (GDPR, NIS2, ecc.)</li>
+            <li>Considerare l'adozione di framework di sicurezza come ISO 27001 o NIST</li>
+            <li>Investire in soluzioni di <strong>monitoring e detection</strong> per identificare anomalie in tempo reale</li>
+        </ul>
+        
         <p>
-            <strong>Conclusione:</strong> Investire nella cybersecurity non è più un optional: è fondamentale per la protezione e la crescita di ogni realtà digitale.
+            <strong>Conclusione:</strong> Investire nella cybersecurity non è più un optional: è fondamentale per la protezione e la crescita di ogni realtà digitale. 
+            La sicurezza è un processo continuo che richiede vigilanza, aggiornamento costante e una cultura della consapevolezza a tutti i livelli dell'organizzazione.
+        </p>
+        
+        <p style="background: var(--secondary); padding: 15px; border-left: 4px solid var(--primary); border-radius: 8px; margin-top: 30px;">
+            <strong>💡 Hai bisogno di consulenza in cybersecurity?</strong><br>
+            Offro servizi di assessment, formazione e implementazione di soluzioni di sicurezza per aziende e professionisti. 
+            <a href="../index.html#contact" style="color: var(--primary); font-weight: 600;">Contattami per una consulenza</a>.
         </p>
     </article>
+
+    <script>
+        // Dark/Light mode
+        const body = document.body;
+        const btnLight = document.getElementById('mode-light');
+        const btnDark = document.getElementById('mode-dark');
+        
+        // Check saved theme
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+        }
+        
+        btnDark.onclick = () => {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+            localStorage.setItem('theme','dark');
+        };
+        
+        btnLight.onclick = () => {
+            body.classList.remove('dark');
+            btnLight.classList.add('active');
+            btnDark.classList.remove('active');
+            localStorage.setItem('theme','light');
+        };
+    </script>
 </body>
 </html>

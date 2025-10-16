@@ -2,37 +2,154 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corso Full Stack: frontend e backend per tutti | Michele Siddi</title>
-    <meta name="description" content="Scopri cos’è lo sviluppo Full Stack, come imparare frontend e backend e diventare uno sviluppatore completo.">
+    <meta name="description" content="Scopri cos'è lo sviluppo Full Stack, come imparare frontend e backend e diventare uno sviluppatore completo.">
+    <meta name="keywords" content="full stack, frontend, backend, sviluppo web, programmazione">
+    <meta name="author" content="Michele Siddi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+        <button id="mode-light" title="Light mode" class="active"><i class="fa-regular fa-sun"></i></button>
+        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    
     <article class="blog-article">
+        <a href="../index.html#articles" class="back-link" style="display:inline-block; margin-bottom:20px; color:var(--primary); text-decoration:none; font-weight:600;">
+            <i class="fa-solid fa-arrow-left"></i> Torna agli articoli
+        </a>
+        
         <h1>Corso Full Stack: frontend e backend per tutti</h1>
-        <p class="date">25 settembre 2025</p>
-        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Full Stack" style="max-width:100%; border-radius:10px;">
+        <p class="date"><i class="fa-solid fa-calendar"></i> 25 settembre 2025 | <i class="fa-solid fa-user"></i> Michele Siddi</p>
+        
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Full Stack Development" loading="lazy">
+        
         <p>
-            Lo <strong>sviluppo Full Stack</strong> unisce il frontend (ciò che vede l’utente) e il backend (ciò che accade sul server) in un’unica figura professionale.
+            Lo <strong>sviluppo Full Stack</strong> unisce il frontend (ciò che vede l'utente) e il backend (ciò che accade sul server) in un'unica figura professionale. 
+            Un Full Stack Developer è in grado di gestire l'intero ciclo di sviluppo di un'applicazione web, dalla progettazione dell'interfaccia alla gestione dei database.
         </p>
-        <h2>Cosa fa un Full Stack Developer?</h2>
+        
+        <h2>🎯 Cosa fa un Full Stack Developer?</h2>
+        <p>Un Full Stack Developer è un professionista versatile che padroneggia sia il lato client che il lato server:</p>
         <ul>
-            <li>Progetta l’interfaccia utente (HTML, CSS, JavaScript)</li>
-            <li>Implementa la logica di business e gestisce i dati (Python, Node.js, Java...)</li>
-            <li>Configura database, server e API</li>
+            <li><strong>Frontend Development:</strong> Progetta e implementa l'interfaccia utente utilizzando HTML, CSS e JavaScript. Si occupa dell'esperienza utente, del design responsive e dell'interattività della pagina.</li>
+            <li><strong>Backend Development:</strong> Implementa la logica di business, gestisce i dati e crea le API che collegano il frontend al database. Utilizza linguaggi come Python, Node.js, Java, PHP o Ruby.</li>
+            <li><strong>Database Management:</strong> Progetta e gestisce database relazionali (MySQL, PostgreSQL) o NoSQL (MongoDB, Redis) per memorizzare e recuperare i dati in modo efficiente.</li>
+            <li><strong>DevOps e Deploy:</strong> Configura server, gestisce il deploy delle applicazioni e si occupa di CI/CD (Continuous Integration/Continuous Deployment).</li>
+            <li><strong>API e Integrazioni:</strong> Crea e integra API RESTful o GraphQL per consentire la comunicazione tra diversi sistemi.</li>
         </ul>
-        <h2>Come si diventa Full Stack?</h2>
+        
+        <h2>📚 Come si diventa Full Stack Developer?</h2>
+        <p>Il percorso per diventare Full Stack Developer richiede dedizione e un apprendimento strutturato:</p>
+        
+        <h3>1. Fondamenti Web (Frontend)</h3>
+        <p>Inizia con le basi del web development:</p>
+        <ul>
+            <li><strong>HTML5:</strong> La struttura delle pagine web</li>
+            <li><strong>CSS3:</strong> Lo styling e il layout (Flexbox, Grid, animazioni)</li>
+            <li><strong>JavaScript:</strong> Il linguaggio di programmazione del web (ES6+, DOM manipulation, eventi)</li>
+            <li><strong>Framework Frontend:</strong> React, Vue.js o Angular per creare interfacce moderne e dinamiche</li>
+        </ul>
+        
+        <h3>2. Backend Development</h3>
+        <p>Approfondisci un linguaggio backend e il suo ecosistema:</p>
+        <ul>
+            <li><strong>Node.js + Express:</strong> JavaScript anche lato server (ottimo per chi viene dal frontend)</li>
+            <li><strong>Python + Django/Flask:</strong> Semplice da imparare, potente e versatile</li>
+            <li><strong>PHP + Laravel:</strong> Molto usato, con un ecosistema maturo</li>
+            <li><strong>Java + Spring Boot:</strong> Enterprise-ready, performance elevate</li>
+        </ul>
+        
+        <h3>3. Database e Persistenza</h3>
+        <p>Impara a gestire i dati:</p>
+        <ul>
+            <li><strong>SQL:</strong> MySQL, PostgreSQL per database relazionali</li>
+            <li><strong>NoSQL:</strong> MongoDB per dati non strutturati, Redis per caching</li>
+            <li><strong>ORM:</strong> Sequelize, Mongoose, SQLAlchemy per semplificare l'interazione con i database</li>
+        </ul>
+        
+        <h3>4. Strumenti e Pratiche</h3>
+        <p>Adotta gli strumenti professionali:</p>
+        <ul>
+            <li><strong>Git e GitHub:</strong> Version control essenziale per la collaborazione</li>
+            <li><strong>Testing:</strong> Jest, Mocha, PyTest per garantire la qualità del codice</li>
+            <li><strong>Docker:</strong> Containerizzazione per ambienti consistenti</li>
+            <li><strong>Cloud Services:</strong> AWS, Azure, Google Cloud per il deploy</li>
+        </ul>
+        
+        <h2>🚀 Progetti pratici per imparare</h2>
+        <p>La pratica è fondamentale. Ecco alcuni progetti per consolidare le tue competenze:</p>
         <ol>
-            <li>Impara le basi del web (HTML, CSS, JavaScript)</li>
-            <li>Approfondisci un linguaggio backend (Python, Node.js, PHP...)</li>
-            <li>Studia i database (MySQL, MongoDB...)</li>
-            <li>Realizza progetti pratici combinando frontend e backend</li>
+            <li><strong>Todo List App:</strong> Un classico per imparare CRUD operations e gestione dello stato</li>
+            <li><strong>Blog Platform:</strong> Sistema completo con autenticazione, gestione contenuti e commenti</li>
+            <li><strong>E-commerce:</strong> Carrello, pagamenti, gestione ordini e inventario</li>
+            <li><strong>Social Media Clone:</strong> Feed, like, commenti, profili utente e real-time updates</li>
+            <li><strong>Dashboard Analytics:</strong> Visualizzazione dati, grafici e report interattivi</li>
         </ol>
+        
+        <h2>💡 Consigli per aspiranti Full Stack Developer</h2>
+        <ul>
+            <li><strong>Specializzati prima di generalizzare:</strong> Diventa esperto in una tecnologia prima di passare alla successiva</li>
+            <li><strong>Segui un percorso, non saltare da una tecnologia all'altra</strong> casualmente</li>
+            <li><strong>Contribuisci a progetti open source</strong> per fare esperienza e networking</li>
+            <li><strong>Crea un portfolio</strong> con i tuoi progetti migliori</li>
+            <li><strong>Resta aggiornato:</strong> Il mondo del web development evolve rapidamente</li>
+            <li><strong>Impara a debuggare:</strong> È una skill cruciale che fa la differenza</li>
+            <li><strong>Lavora in team:</strong> Usa Git, partecipa a code review, comunica efficacemente</li>
+        </ul>
+        
+        <h2>📈 Opportunità di carriera</h2>
+        <p>Il Full Stack Developer è tra le figure più richieste nel mercato del lavoro tech:</p>
+        <ul>
+            <li><strong>Startup:</strong> Dove la versatilità è essenziale</li>
+            <li><strong>Aziende consolidate:</strong> Per gestire progetti complessi end-to-end</li>
+            <li><strong>Freelance:</strong> Alta domanda per progetti web completi</li>
+            <li><strong>Remote work:</strong> Molte opportunità di lavoro da remoto</li>
+        </ul>
+        
         <p>
-            <strong>Consiglio:</strong> Impara a lavorare in team e usa strumenti come Git per la collaborazione.
+            <strong>Conclusione:</strong> Il Full Stack Developer è una delle figure più ricercate nel mondo tech. 
+            Con studio costante, pratica quotidiana e la giusta determinazione, puoi diventare il professionista che le aziende stanno cercando. 
+            Il viaggio è lungo, ma le opportunità sono immense!
         </p>
-        <p>
-            <strong>Conclusione:</strong> Il Full Stack Developer è tra le figure più richieste. Con studio e pratica puoi diventare il professionista che le aziende cercano!
+        
+        <p style="background: var(--secondary); padding: 15px; border-left: 4px solid var(--primary); border-radius: 8px; margin-top: 30px;">
+            <strong>💡 Vuoi approfondire lo sviluppo Full Stack?</strong><br>
+            Offro consulenze personalizzate e mentorship per chi vuole entrare nel mondo dello sviluppo web professionale. 
+            <a href="../index.html#contact" style="color: var(--primary); font-weight: 600;">Contattami per maggiori informazioni</a>.
         </p>
     </article>
+
+    <script>
+        // Dark/Light mode
+        const body = document.body;
+        const btnLight = document.getElementById('mode-light');
+        const btnDark = document.getElementById('mode-dark');
+        
+        // Check saved theme
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+        }
+        
+        btnDark.onclick = () => {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+            localStorage.setItem('theme','dark');
+        };
+        
+        btnLight.onclick = () => {
+            body.classList.remove('dark');
+            btnLight.classList.add('active');
+            btnDark.classList.remove('active');
+            localStorage.setItem('theme','light');
+        };
+    </script>
 </body>
 </html>
