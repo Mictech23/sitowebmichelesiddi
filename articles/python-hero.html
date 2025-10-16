@@ -2,43 +2,240 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corso Python da zero a hero | Michele Siddi</title>
     <meta name="description" content="Impara Python dalle basi alle applicazioni avanzate, con esercizi pratici e consigli per diventare uno sviluppatore completo.">
+    <meta name="keywords" content="python, programmazione, corso python, tutorial python, sviluppo software">
+    <meta name="author" content="Michele Siddi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+        <button id="mode-light" title="Light mode" class="active"><i class="fa-regular fa-sun"></i></button>
+        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    
     <article class="blog-article">
+        <a href="../index.html#articles" class="back-link" style="display:inline-block; margin-bottom:20px; color:var(--primary); text-decoration:none; font-weight:600;">
+            <i class="fa-solid fa-arrow-left"></i> Torna agli articoli
+        </a>
+        
         <h1>Corso Python da zero a hero</h1>
-        <p class="date">2 ottobre 2025</p>
-        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=800&q=80" alt="Python" style="max-width:100%; border-radius:10px;">
+        <p class="date"><i class="fa-solid fa-calendar"></i> 2 ottobre 2025 | <i class="fa-solid fa-user"></i> Michele Siddi</p>
+        
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=800&q=80" alt="Python Programming" loading="lazy">
+        
         <p>
-            Vuoi imparare <strong>Python</strong> partendo da zero? Questo corso ti guiderà dai concetti base fino allo sviluppo di applicazioni reali.
+            Vuoi imparare <strong>Python</strong> partendo da zero? Questo corso ti guiderà dai concetti base fino allo sviluppo di applicazioni reali. 
+            Python è uno dei linguaggi di programmazione più popolari e versatili al mondo, utilizzato in web development, data science, intelligenza artificiale, automazione e molto altro.
         </p>
-        <h2>Perché scegliere Python?</h2>
+        
+        <h2>🐍 Perché scegliere Python?</h2>
+        <p>Python è il linguaggio ideale sia per principianti che per esperti:</p>
         <ul>
-            <li>Semplice da imparare</li>
-            <li>Estremamente versatile (web, AI, automazione...)</li>
-            <li>Grande comunità e tantissime risorse</li>
+            <li><strong>Semplice da imparare:</strong> Sintassi chiara e leggibile, simile al linguaggio naturale. Perfetto per chi inizia a programmare.</li>
+            <li><strong>Estremamente versatile:</strong> Web development (Django, Flask), Data Science (Pandas, NumPy), AI/ML (TensorFlow, PyTorch), automazione, scripting, game development e molto altro.</li>
+            <li><strong>Grande comunità:</strong> Tantissime risorse gratuite, tutorial, librerie open source e supporto attivo dalla community.</li>
+            <li><strong>Alto valore sul mercato:</strong> Una delle competenze più richieste nel mondo del lavoro tech.</li>
+            <li><strong>Ecosistema ricco:</strong> Oltre 300.000 pacchetti disponibili su PyPI per ogni esigenza.</li>
         </ul>
-        <h2>Contenuti del corso</h2>
-        <ol>
-            <li>Installazione e ambiente di sviluppo</li>
-            <li>Variabili, tipi di dato e operatori</li>
-            <li>Strutture di controllo (if, for, while)</li>
-            <li>Funzioni e moduli</li>
-            <li>Lavorare con file e dati</li>
-            <li>Introduzione a librerie avanzate (NumPy, Pandas, Flask)</li>
-        </ol>
-        <h2>Esercizio pratico</h2>
-        <p>
-            Prova a scrivere un programma che chiede il nome all’utente e lo saluta:
-        </p>
+        
+        <h2>📚 Contenuti del corso</h2>
+        
+        <h3>1. Primi passi con Python</h3>
+        <ul>
+            <li><strong>Installazione:</strong> Python 3.x, setup dell'ambiente di sviluppo (VS Code, PyCharm)</li>
+            <li><strong>Primo programma:</strong> Hello World e esecuzione di script Python</li>
+            <li><strong>REPL:</strong> Interactive Python shell per sperimentare rapidamente</li>
+        </ul>
+        
+        <h3>2. Fondamenti del linguaggio</h3>
+        <ul>
+            <li><strong>Variabili e tipi di dato:</strong> int, float, str, bool, None</li>
+            <li><strong>Operatori:</strong> Aritmetici, di confronto, logici, di assegnazione</li>
+            <li><strong>Input/Output:</strong> print(), input() e formattazione delle stringhe (f-strings)</li>
+            <li><strong>Commenti e documentazione:</strong> Best practice per codice leggibile</li>
+        </ul>
+        
+        <h3>3. Strutture di controllo</h3>
+        <ul>
+            <li><strong>Condizioni:</strong> if, elif, else per prendere decisioni</li>
+            <li><strong>Cicli:</strong> for loop per iterare su sequenze, while per cicli condizionali</li>
+            <li><strong>Break e continue:</strong> Controllare il flusso dei cicli</li>
+            <li><strong>Comprehensions:</strong> List, dict e set comprehensions per codice conciso</li>
+        </ul>
+        
+        <h3>4. Strutture dati</h3>
+        <ul>
+            <li><strong>Liste:</strong> Collezioni ordinate e modificabili</li>
+            <li><strong>Tuple:</strong> Collezioni ordinate e immutabili</li>
+            <li><strong>Dizionari:</strong> Coppie chiave-valore per dati strutturati</li>
+            <li><strong>Set:</strong> Collezioni di elementi unici</li>
+            <li><strong>Operazioni avanzate:</strong> Slicing, unpacking, metodi built-in</li>
+        </ul>
+        
+        <h3>5. Funzioni e moduli</h3>
+        <ul>
+            <li><strong>Definire funzioni:</strong> def, parametri, return, scope</li>
+            <li><strong>Funzioni lambda:</strong> Funzioni anonime per operazioni rapide</li>
+            <li><strong>Args e kwargs:</strong> Parametri variabili</li>
+            <li><strong>Moduli e package:</strong> Organizzare il codice, import, __init__.py</li>
+            <li><strong>Libreria standard:</strong> os, sys, datetime, json, math, random</li>
+        </ul>
+        
+        <h3>6. Lavorare con file e dati</h3>
+        <ul>
+            <li><strong>File I/O:</strong> Leggere e scrivere file (txt, csv, json)</li>
+            <li><strong>Context manager:</strong> with statement per gestione sicura delle risorse</li>
+            <li><strong>Eccezioni:</strong> try, except, finally per gestire gli errori</li>
+            <li><strong>CSV e JSON:</strong> Lavorare con formati dati comuni</li>
+        </ul>
+        
+        <h3>7. Programmazione Object-Oriented</h3>
+        <ul>
+            <li><strong>Classi e oggetti:</strong> Definire e utilizzare classi</li>
+            <li><strong>Attributi e metodi:</strong> __init__, self, metodi di istanza e di classe</li>
+            <li><strong>Ereditarietà:</strong> Riutilizzo del codice e polimorfismo</li>
+            <li><strong>Encapsulation:</strong> Public, protected, private attributes</li>
+        </ul>
+        
+        <h3>8. Librerie avanzate e applicazioni</h3>
+        <ul>
+            <li><strong>NumPy:</strong> Computazione numerica e array multidimensionali</li>
+            <li><strong>Pandas:</strong> Analisi e manipolazione dati (DataFrame, Series)</li>
+            <li><strong>Flask/Django:</strong> Web development e API REST</li>
+            <li><strong>Requests:</strong> HTTP client per API e web scraping</li>
+            <li><strong>Beautiful Soup:</strong> Parsing HTML per web scraping</li>
+        </ul>
+        
+        <h2>💻 Esercizi pratici</h2>
+        
+        <h3>Esercizio 1: Hello World interattivo</h3>
+        <p>Crea un programma che chiede il nome all'utente e lo saluta:</p>
         <pre><code>nome = input("Come ti chiami? ")
-print("Ciao " + nome + "!")
-        </code></pre>
+print(f"Ciao {nome}! Benvenuto nel mondo Python!")</code></pre>
+        
+        <h3>Esercizio 2: Calcolatrice semplice</h3>
+        <p>Implementa una calcolatrice che esegue le quattro operazioni base:</p>
+        <pre><code>def calcolatrice():
+    num1 = float(input("Primo numero: "))
+    operatore = input("Operazione (+, -, *, /): ")
+    num2 = float(input("Secondo numero: "))
+    
+    if operatore == '+':
+        risultato = num1 + num2
+    elif operatore == '-':
+        risultato = num1 - num2
+    elif operatore == '*':
+        risultato = num1 * num2
+    elif operatore == '/' and num2 != 0:
+        risultato = num1 / num2
+    else:
+        return "Operazione non valida"
+    
+    return f"Risultato: {risultato}"
+
+print(calcolatrice())</code></pre>
+        
+        <h3>Esercizio 3: Gestione lista della spesa</h3>
+        <p>Crea un programma per gestire una lista della spesa:</p>
+        <pre><code>lista_spesa = []
+
+while True:
+    print("\n1. Aggiungi prodotto")
+    print("2. Visualizza lista")
+    print("3. Rimuovi prodotto")
+    print("4. Esci")
+    
+    scelta = input("Scelta: ")
+    
+    if scelta == '1':
+        prodotto = input("Nome prodotto: ")
+        lista_spesa.append(prodotto)
+        print(f"{prodotto} aggiunto!")
+    elif scelta == '2':
+        print("\nLista della spesa:")
+        for i, prodotto in enumerate(lista_spesa, 1):
+            print(f"{i}. {prodotto}")
+    elif scelta == '3':
+        prodotto = input("Prodotto da rimuovere: ")
+        if prodotto in lista_spesa:
+            lista_spesa.remove(prodotto)
+            print(f"{prodotto} rimosso!")
+    elif scelta == '4':
+        break</code></pre>
+        
+        <h2>🎯 Progetti per consolidare le competenze</h2>
+        <ol>
+            <li><strong>Todo List CLI:</strong> Applicazione command-line per gestire task</li>
+            <li><strong>Weather App:</strong> Recupera dati meteo da API</li>
+            <li><strong>Password Generator:</strong> Genera password sicure e casuali</li>
+            <li><strong>Web Scraper:</strong> Estrai dati da siti web</li>
+            <li><strong>Data Analyzer:</strong> Analizza CSV con Pandas e crea grafici</li>
+            <li><strong>Simple API:</strong> Crea una REST API con Flask</li>
+        </ol>
+        
+        <h2>📖 Risorse per imparare</h2>
+        <ul>
+            <li><strong>Documentazione ufficiale:</strong> docs.python.org</li>
+            <li><strong>Real Python:</strong> Tutorial e articoli di qualità</li>
+            <li><strong>Python Package Index (PyPI):</strong> Repository di pacchetti</li>
+            <li><strong>Stack Overflow:</strong> Community per risolvere problemi</li>
+            <li><strong>GitHub:</strong> Studia codice open source di qualità</li>
+        </ul>
+        
+        <h2>💡 Consigli per il successo</h2>
+        <ul>
+            <li><strong>Pratica quotidiana:</strong> Anche solo 30 minuti al giorno fanno la differenza</li>
+            <li><strong>Progetti personali:</strong> Costruisci qualcosa che ti interessa</li>
+            <li><strong>Leggi codice altrui:</strong> Impara dalle best practice</li>
+            <li><strong>Debugging è apprendimento:</strong> Gli errori sono opportunità</li>
+            <li><strong>Community:</strong> Partecipa a forum e gruppi Python</li>
+            <li><strong>PEP 8:</strong> Segui le convenzioni di stile Python</li>
+        </ul>
+        
         <p>
-            <strong>Conclusione:</strong> Con costanza e pratica, Python può aprirti le porte del mondo digitale. Inizia ora!
+            <strong>Conclusione:</strong> Con costanza e pratica quotidiana, Python può aprirti le porte del mondo digitale. 
+            È un linguaggio che cresce con te: inizia con script semplici e arriverai a costruire applicazioni complesse. 
+            Il momento migliore per iniziare è adesso!
+        </p>
+        
+        <p style="background: var(--secondary); padding: 15px; border-left: 4px solid var(--primary); border-radius: 8px; margin-top: 30px;">
+            <strong>💡 Vuoi approfondire Python?</strong><br>
+            Offro corsi personalizzati e mentorship per chi vuole padroneggiare Python per il web development, data science o automazione. 
+            <a href="../index.html#contact" style="color: var(--primary); font-weight: 600;">Contattami per maggiori informazioni</a>.
         </p>
     </article>
+
+    <script>
+        // Dark/Light mode
+        const body = document.body;
+        const btnLight = document.getElementById('mode-light');
+        const btnDark = document.getElementById('mode-dark');
+        
+        // Check saved theme
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+        }
+        
+        btnDark.onclick = () => {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+            localStorage.setItem('theme','dark');
+        };
+        
+        btnLight.onclick = () => {
+            body.classList.remove('dark');
+            btnLight.classList.add('active');
+            btnDark.classList.remove('active');
+            localStorage.setItem('theme','light');
+        };
+    </script>
 </body>
 </html>
