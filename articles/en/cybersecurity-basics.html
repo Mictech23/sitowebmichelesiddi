@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity: The Basics | Michele Siddi</title>
+    <meta name="description" content="Guide to the basic concepts of cybersecurity: protect your data and your company from cyber threats.">
+    <meta name="keywords" content="cybersecurity, information security, data protection, cyber threats">
+    <meta name="author" content="Michele Siddi">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+        <button id="mode-light" title="Light mode" class="active"><i class="fa-regular fa-sun"></i></button>
+        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    </div>
+    
+    <article class="blog-article">
+        <a href="../../index.html#articles" class="back-link" style="display:inline-block; margin-bottom:20px; color:var(--primary); text-decoration:none; font-weight:600;">
+            <i class="fa-solid fa-arrow-left"></i> Back to articles
+        </a>
+        
+        <h1>Cybersecurity: The Basics</h1>
+        <p class="date"><i class="fa-solid fa-calendar"></i> October 5, 2025 | <i class="fa-solid fa-user"></i> Michele Siddi</p>
+        
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity" loading="lazy">
+        
+        <p>
+            <strong>Cybersecurity</strong> is the set of techniques and processes to protect systems, networks and data from cyber attacks, theft and damage. 
+            In an increasingly connected world, cybersecurity has become an absolute priority for businesses and individuals.
+        </p>
+        
+        <h2>🔐 Key Concepts: The CIA Triad</h2>
+        <p>Information security is based on three fundamental pillars, known as the <strong>CIA Triad</strong>:</p>
+        <ul>
+            <li><strong>Confidentiality:</strong> Ensuring that only authorized individuals can access sensitive information. This includes the use of encryption, multi-factor authentication and strict access controls.</li>
+            <li><strong>Integrity:</strong> Protecting data from unauthorized or accidental modifications. Data must remain accurate and reliable throughout its lifecycle.</li>
+            <li><strong>Availability:</strong> Ensuring that services and data are always accessible when needed to authorized users, protecting systems from disruptions and attacks that could make them unusable.</li>
+        </ul>
+        
+        <h2>⚠️ Common Threats in 2025</h2>
+        <p>The cyber threat landscape is constantly evolving. Here are the most common ones:</p>
+        <ul>
+            <li><strong>Malware:</strong> Malicious software including viruses, trojans, ransomware and spyware. Ransomware, in particular, encrypts data and demands a ransom for their recovery.</li>
+            <li><strong>Phishing and Social Engineering:</strong> Deception techniques via email, SMS or calls to obtain sensitive information or system access.</li>
+            <li><strong>DDoS Attacks:</strong> Intentional overload of systems to make them inaccessible to legitimate users.</li>
+            <li><strong>Credential Theft:</strong> Passwords and sensitive data stolen through data breaches, keyloggers or brute force attacks.</li>
+            <li><strong>Zero-Day Vulnerabilities:</strong> Unknown security flaws that are exploited before a patch is released.</li>
+        </ul>
+        
+        <h2>🛡️ How to Protect Yourself: Best Practices</h2>
+        <p>Implementing good security practices is essential to reduce risks:</p>
+        <ul>
+            <li><strong>Strong and unique passwords:</strong> Use complex passwords (at least 12 characters, with uppercase, lowercase, numbers and symbols) and different ones for each account. Consider using a password manager.</li>
+            <li><strong>Two-factor authentication (2FA):</strong> Add an extra layer of security by requiring a second verification method beyond the password.</li>
+            <li><strong>Regular updates:</strong> Always keep software, operating systems and applications updated to fix security vulnerabilities.</li>
+            <li><strong>Regular backups:</strong> Make frequent backups of important data and store them in secure and separate locations (3-2-1 rule: 3 copies, 2 different media, 1 offsite).</li>
+            <li><strong>Staff training:</strong> Most attacks succeed due to human error. Train the team on security and current threats.</li>
+            <li><strong>Firewall and Antivirus:</strong> Use modern security solutions and keep them updated.</li>
+            <li><strong>Principle of least privilege:</strong> Grant users only the permissions strictly necessary to do their job.</li>
+        </ul>
+        
+        <h2>💼 Cybersecurity for Businesses</h2>
+        <p>Organizations must adopt a structured approach to security:</p>
+        <ul>
+            <li>Conduct regular <strong>security assessments</strong> to identify vulnerabilities</li>
+            <li>Implement an <strong>incident response plan</strong> to manage any breaches</li>
+            <li>Comply with applicable <strong>regulations</strong> (GDPR, NIS2, etc.)</li>
+            <li>Consider adopting security frameworks such as ISO 27001 or NIST</li>
+            <li>Invest in <strong>monitoring and detection</strong> solutions to identify anomalies in real-time</li>
+        </ul>
+        
+        <p>
+            <strong>Conclusion:</strong> Investing in cybersecurity is no longer optional: it is fundamental for the protection and growth of every digital reality. 
+            Security is an ongoing process that requires vigilance, constant updating and a culture of awareness at all levels of the organization.
+        </p>
+        
+        <p style="background: var(--secondary); padding: 15px; border-left: 4px solid var(--primary); border-radius: 8px; margin-top: 30px;">
+            <strong>💡 Need cybersecurity consulting?</strong><br>
+            I offer assessment, training and implementation of security solutions for companies and professionals. 
+            <a href="../../index.html#contact" style="color: var(--primary); font-weight: 600;">Contact me for a consultation</a>.
+        </p>
+    </article>
+
+    <script>
+        // Dark/Light mode
+        const body = document.body;
+        const btnLight = document.getElementById('mode-light');
+        const btnDark = document.getElementById('mode-dark');
+        
+        // Check saved theme
+        if(localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+        }
+        
+        btnDark.onclick = () => {
+            body.classList.add('dark');
+            btnDark.classList.add('active');
+            btnLight.classList.remove('active');
+            localStorage.setItem('theme','dark');
+        };
+        
+        btnLight.onclick = () => {
+            body.classList.remove('dark');
+            btnLight.classList.add('active');
+            btnDark.classList.remove('active');
+            localStorage.setItem('theme','light');
+        };
+    </script>
+</body>
+</html>
