@@ -58,7 +58,101 @@
 
     <section id="sezione3">
         <h2>3. L'Architettura di un Agente AI: I 4 Componenti Chiave</h2>
-        <p>Un agente AI si basa tipicamente su un ciclo di ragionamento e azione. I suoi componenti fondamentali sono:</p>
+        <p>Agenti AI: La Guida Definitiva per Sviluppatori Italiani (Implementazione e Tutorial con Python)Se i Large Language Models (LLM) sono il motore, gli Agenti AI sono l'intero sistema operativo. Questa guida è pensata per lo sviluppatore che vuole superare la fase della semplice prompt engineering e iniziare a costruire sistemi autonomi, capaci di pianificare, agire e risolvere problemi complessi nel mondo reale.Non ci limiteremo alla teoria: analizzeremo l'architettura, ci concentreremo sul framework LangChain in Python e vedremo come dotare un LLM di strumenti concreti.1. Dalla Chatbot all'Agente: Il Cambio di Paradigma 💡La differenza fondamentale tra un LLM e un Agente AI risiede nella loro capacità di Agency (iniziativa).CaratteristicaLLM Base (Es. ChatGPT)Agente AICapacitàRisposta al prompt, generazione testo.Risoluzione di obiettivi complessi e multi-step.InterazioneReattiva (risponde solo all'input).Proattiva (pianifica ed esegue azioni esterne).StrumentiNessuno o limitato (solo dati di training).Accesso illimitato a API, codice, DB, Web.MemoriaSolo memoria a breve termine (sessione).Memoria a breve e a lungo termine (Vector DB).Un Agente AI opera in un Loop di Ragionamento e Azione (ReAct), che imita il processo decisionale umano: Osservazione → Ragionamento → Azione.2. Architettura Tecnica di un Agente AI in PythonPer costruire un Agente robusto, dobbiamo combinare diversi componenti fondamentali, gestiti in modo ottimale dal framework LangChain.A. Il Core Decisionale (LLM)Il cuore è un Large Language Model potente (GPT-4, Claude 3, o modelli open-source come Llama 3) che gestisce l'interpretazione del linguaggio e la generazione del piano d'azione. Il modello deve essere in grado di:Analizzare l'input (prompt) e l'osservazione (risultato dell'azione).Decidere se è necessario uno strumento e quale strumento utilizzare.Formattare la chiamata dello strumento in modo corretto (e.g., JSON o un formato specifico).B. Memoria a Lungo Termine (RAG e Vector Stores)La memoria è ciò che impedisce all'Agente di dimenticare le interazioni passate o la conoscenza aziendale.RAG (Retrieval Augmented Generation): Permette all'LLM di accedere a dati esterni e aggiornati, fondamentali per superare il limite di conoscenza statica del pre-training.Vector Store: Database specializzati (es. ChromaDB, Pinecone, FAISS) che archiviano i dati aziendali come vettori di embedding. Quando l'Agente ha bisogno di informazioni, cerca la similarità semantica nel Vector Store e recupera i segmenti di testo più rilevanti da fornire all'LLM.C. Gli Strumenti (Tools)Gli strumenti sono l'interfaccia dell'Agente con il mondo. Possono essere qualsiasi cosa:GoogleSearchAPI: Per aggiornare la conoscenza in tempo reale.CodeInterpreter: Per eseguire codice Python o Shell e risolvere problemi matematici/logici.DatabaseConnector: Per interrogare un database SQL o NoSQL.EmailSender: Per compiere azioni concrete come l'invio di notifiche.3. Tutorial Pratico: Costruire un Agente "Analista Dati" con LangChainImplementeremo un Agente semplice ma funzionale che può eseguire codice Python per rispondere a domande basate su dati o logica complessa, come un analista di Business Intelligence.3.1. Prerequisiti e SetupAssicurati di avere Python installato e le librerie necessarie:Bashpip install langchain langchain-openai tavily-python
+Nota: Questo esempio utilizza un modello OpenAI (come GPT-4) per il suo avanzato ragionamento. Avrai bisogno di una chiave API.3.2. Definizione dello Strumento (Tool)Il nostro Agente necessiterà di uno strumento per eseguire codice. Usiamo l'interfaccia standard di LangChain per definire uno strumento Python.Pythonfrom langchain.tools import tool
+import io
+import sys
+
+# 1. Definizione dello Strumento per l'Esecuzione di Codice
+
+@tool
+def run_python_code(code: str) -> str:
+    """
+    Esegue il codice Python fornito e cattura l'output. 
+    Utile per calcoli matematici complessi o logica.
+    """
+    old_stdout = sys.stdout
+    redirected_output = sys.stdout = io.StringIO()
+    
+    try:
+        # L'esecuzione del codice avviene in un contesto controllato
+        exec(code, {}) 
+        output = redirected_output.getvalue()
+        
+        # Aggiustamento per l'output vuoto o insignificante
+        if not output and "print(" not in code:
+             return f"Codice eseguito con successo, ma nessuna stampa visualizzata. 
+                       Assicurati di usare 'print()' per mostrare i risultati."
+                       
+        return f"Output dell'esecuzione del codice:\n{output}"
+    
+    except Exception as e:
+        return f"Errore nell'esecuzione del codice: {e}"
+    
+    finally:
+        sys.stdout = old_stdout
+
+# Elenco degli strumenti disponibili per l'Agente
+tools = [run_python_code]
+3.3. Inizializzazione dell'LLM e del Prompt di SistemaL'Agente ha bisogno di un Prompt di Sistema (System Prompt) che ne definisca la personalità, gli obiettivi e, soprattutto, le istruzioni su come interagire con gli strumenti. Questa è una forma avanzata di prompt engineering.Pythonfrom langchain_openai import ChatOpenAI
+from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
+
+# Inizializza l'LLM
+llm = ChatOpenAI(model="gpt-4o", temperature=0) 
+
+# Il System Prompt è cruciale per la logica ReAct
+system_prompt = """
+Sei un assistente AI di analisi dati altamente competente.
+Il tuo obiettivo è risolvere i quesiti degli utenti.
+Quando ti viene richiesto un calcolo complesso, una manipolazione di stringhe o una logica matematica, 
+DEVI utilizzare lo strumento 'run_python_code'. 
+Non eseguire MAI calcoli direttamente.
+Procedi sempre seguendo il ciclo Ragionamento (Reasoning) -> Azione (Action).
+"""
+
+# Definiamo la struttura del prompt, inclusi gli strumenti e la cronologia
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", system_prompt),
+        MessagesPlaceholder(variable_name="chat_history", optional=True), # Per la memoria
+        ("human", "{input}"),
+        MessagesPlaceholder(variable_name="agent_scratchpad"), # Spazio di lavoro per l'Agente (ReAct)
+    ]
+)
+3.4. Creazione dell'AgenteUtilizzeremo l'approccio basato sulla Tool Calling (chiamate a strumenti) supportato nativamente da modelli come GPT-4o, che semplifica l'implementazione del ciclo ReAct.Pythonfrom langchain.agents import AgentExecutor, create_openai_tools_agent
+
+# 1. Crea l'Agente unendo LLM, Strumenti e Prompt
+agent = create_openai_tools_agent(
+    llm=llm,
+    tools=tools,
+    prompt=prompt
+)
+
+# 2. Crea l'esecutore dell'Agente
+# L'AgentExecutor gestisce il loop Ragionamento-Azione-Osservazione
+agent_executor = AgentExecutor(
+    agent=agent, 
+    tools=tools, 
+    verbose=True, # Mostra il processo ReAct a console
+    handle_parsing_errors=True # Gestione degli errori di formattazione
+)
+3.5. Esecuzione e Test dell'AgenteOra possiamo testare l'Agente con un compito che richiede l'esecuzione di codice:Python# Domanda che richiede l'uso dello strumento 'run_python_code'
+question = """
+Ho tre server con le seguenti disponibilità orarie settimanali in percentuale: 
+Server A: 99.85%, Server B: 99.92%, Server C: 99.98%. 
+Assumendo 168 ore totali in una settimana, qual è il tempo medio di inattività (in minuti) per i tre server? 
+Mostra il calcolo dettagliato.
+"""
+
+print(f"\n--- INIZIO ESECUZIONE AGENTE ---\n")
+
+try:
+    result = agent_executor.invoke({"input": question})
+    print(f"\nRISPOSTA FINALE:\n{result['output']}")
+
+except Exception as e:
+    print(f"L'agente ha incontrato un errore grave: {e}")
+L'output del terminale mostrerà l'intera sequenza Ragionamento → Chiamata Strumento → Osservazione → Ragionamento Finale, confermando che l'Agente ha pianificato l'azione e utilizzato correttamente lo strumento run_python_code.4. Tecniche Avanzate per Agenti RobustiPer gli sviluppatori che mirano alla produzione, sono necessarie tecniche per rendere gli Agenti più stabili e intelligenti.A. Ottimizzazione della Memoria (RAG)Quando si lavora con dati aziendali riservati, il RAG è obbligatorio.Suddivisione (Chunking): I documenti aziendali (PDF, testi, log) vengono suddivisi in piccoli segmenti di testo (chunks).Vettorizzazione: Ogni chunk viene trasformato in un vettore di embedding (numerico) tramite un modello dedicato (es. text-embedding-3-small).Archiviazione: I vettori sono archiviati in un Vector Store.Recupero (Retrieval): Quando l'Agente riceve una domanda, la domanda stessa viene vettorizzata e usata per recuperare i chunks più semanticamente vicini dal Vector Store.Questi chunks recuperati vengono aggiunti al Context Window dell'LLM prima che questo formuli la risposta, garantendo precisione e citazione delle fonti.B. Gestione e Selezione Dinamica degli StrumentiIn contesti aziendali, un Agente può avere decine di strumenti (DB, CRM, API interne).Prompting Dinamico: Il system_prompt deve descrivere con precisione le funzionalità di ogni strumento, inclusi i tipi di dato accettati e l'output atteso. Un buon prompt minimizza i tentativi falliti dell'Agente.Routing e Tool-Calling: Gli LLM più recenti (come GPT-4o, Llama 3) eccellono nel Tool Calling nativo: riconoscono direttamente se l'input richiede un'azione e generano un oggetto JSON formattato per chiamare lo strumento, superando le precedenti, più fragili, implementazioni basate su parsing di stringhe.C. Autocorrezione e ValutazioneGli Agenti falliscono. Una progettazione matura include meccanismi di gestione degli errori:Self-Correction Loop: Se l'output di un'azione è un errore (es. un errore di sintassi Python), l'Agente deve essere istruito nel system_prompt a rileggere l'errore (l'Osservazione) e tentare un'azione correttiva.Limiti di Tentativo: Impostare un numero massimo di iterazioni nel ciclo ReAct (max_iterations in AgentExecutor) per prevenire loop infiniti o spreco di risorse.Conclusione: L'Era della Proattività 🚀Gli Agenti AI sono il punto di svolta. Non sono semplici assistenti, ma sistemi software interconnessi che delegano le mansioni più gravose (Ricerca, Analisi Dati, Interazione API) all'Intelligenza Artificiale.Per lo sviluppatore in Italia, padroneggiare l'architettura degli Agenti con framework come LangChain è la competenza chiave per costruire la prossima generazione di applicazioni aziendali, spostando il focus dal cosa l'AI può rispondere al cosa l'AI può fare per automatizzare il business.</p>
         <ol>
             <li><strong>Core Model (LLM):</strong> Il "cervello" dell'agente. Un modello linguistico potente (es. GPT-4, Llama 3, Claude 3) che si occupa del ragionamento, della pianificazione e della scomposizione dei problemi.</li>
             <li><strong>Tools
