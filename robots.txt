@@ -1,0 +1,11 @@
+# robots.txt for https://mictech23.github.io/michelesiddi/
+
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /.github/
+
+# Sitemap
+Sitemap: https://mictech23.github.io/michelesiddi/sitemap.xml
