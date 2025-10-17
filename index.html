@@ -100,7 +100,7 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content">
                 <div class="hero-avatar">
-                    <img src="foto-profilo.jpg" alt="Ritratto professionale di Michele Siddi" loading="lazy">
+                    <img src="foto-profilo.jpg" alt="Ritratto professionale di Michele Siddi">
                 </div>
                 <h1 class="hero-title" id="hero-title">Michele Siddi</h1>
                 <p class="hero-payoff" id="hero-payoff">News, analisi e formazione per chi vive l'innovazione digitale.</p>
@@ -118,17 +118,31 @@
             </div>
         </section>
         <nav aria-label="Navigazione principale">
-            <a href="#news" class="active" id="nav-news">News</a>
+            <a href="#about" class="active" id="nav-about">Chi sono</a>
+            <a href="#news" id="nav-news">News</a>
             <a href="#articles" id="nav-articles">Articoli</a>
             <a href="#papers" id="nav-papers">Paper</a>
             <a href="#videos" id="nav-videos">Video</a>
-            <a href="#about" id="nav-about">Chi sono</a>
             <a href="#portfolio" id="nav-portfolio">Progetti</a>
             <a href="{{ '/blog.html' | relative_url }}" id="nav-blog">Blog</a>
             <a href="#contact" id="nav-contact">Contatti</a>
         </nav>
     </header>
     <main id="main-content" class="container" tabindex="-1">
+        <!-- ABOUT -->
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="about-wrapper">
+                <div class="about-photo">
+                    <img src="foto-profilo.jpg" alt="Foto di Michele Siddi" loading="lazy">
+                </div>
+                <div class="about-text" id="about-text">
+                    <h2 class="section-title" id="about-title">Chi sono</h2>
+                    <p id="about-desc">Ciao! Sono Michele, nato a Cagliari nel 1989 e appassionato di tecnologia fin da giovane. Subito dopo il diploma ho iniziato a lavorare in una catena di informatica come addetto alle vendite, e ho imparato da autodidatta fino a diventare tecnico informatico nella stessa azienda.</p>
+                    <p id="about-journey">Con il tempo mi sono avvicinato alla programmazione e la mia passione è continuata a crescere, conseguendo anche la laurea in informatica. Da circa 10 anni lavoro in Amazon ricoprendo ruoli di responsabilità.</p>
+                    <p id="about-focus">Qui troverai news sul mondo tech, articoli e tutorial, con un focus particolare sull'intelligenza artificiale.</p>
+                </div>
+            </div>
+        </section>
         <!-- NEWS -->
         <section id="news" class="news-section" aria-labelledby="news-title">
             <h2 class="section-title" id="news-title">Ultime news tech</h2>
@@ -345,31 +359,6 @@
                 <p class="form-note" id="newsletter-note">Arriva il venerdì mattina, niente spam e puoi cancellarti in qualsiasi momento.</p>
             </div>
         </section>
-        <!-- ABOUT -->
-        <section id="about" class="about" aria-labelledby="about-title">
-            <div class="about-wrapper">
-                <div class="about-photo">
-                    <img src="foto-profilo.jpg" alt="Foto di Michele Siddi" loading="lazy">
-                </div>
-                <div class="about-text" id="about-text">
-                    <h2 class="section-title" id="about-title">Chi sono</h2>
-                    <p id="about-desc">Sono Michele Siddi, ingegnere informatico e content creator. Dopo anni nella consulenza IT e nella cybersecurity ho deciso di trasformare esperienza e metodi in contenuti: news, articoli, video e paper per aiutare aziende e professionisti a orientarsi nell'innovazione.</p>
-                    <ul class="about-highlights" id="about-list">
-                        <li>Approfondimenti indipendenti su cybersecurity, AI, cloud e trasformazione digitale.</li>
-                        <li>Format divulgativi con esempi pratici, checklist e framework da riutilizzare nei team.</li>
-                        <li>Collaborazioni con community tech, università e aziende per eventi e mentorship.</li>
-                    </ul>
-                    <div class="about-badges" id="about-badges">
-                        <span class="badge">Newsroom tech</span>
-                        <span class="badge">Cybersecurity</span>
-                        <span class="badge">Intelligenza artificiale</span>
-                        <span class="badge">Cloud</span>
-                        <span class="badge">Open source</span>
-                        <span class="badge">Community</span>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- PORTFOLIO -->
         <section id="portfolio" class="portfolio" aria-labelledby="portfolio-title">
             <h2 class="section-title" id="portfolio-title">Progetti &amp; collaborazioni</h2>
@@ -443,7 +432,7 @@
                 heroSubtitle: "Cybersecurity, AI, cloud e cultura tecnologica raccontate con taglio pratico.",
                 ctaNewsletter: "Iscriviti alla newsletter",
                 ctaYoutube: "Segui il canale YouTube",
-                nav: ["News", "Articoli", "Paper", "Video", "Chi sono", "Progetti", "Blog", "Contatti"],
+                nav: ["Chi sono", "News", "Articoli", "Paper", "Video", "Progetti", "Blog", "Contatti"],
                 newsTitle: "Ultime news tech",
                 newsSubtitle: "Aggiornamenti quotidiani su policy, sicurezza e innovazione digitale.",
                 newsCards: [
@@ -485,13 +474,9 @@
                 newsletterButton: "Iscriviti ora",
                 newsletterNote: "Arriva il venerdì mattina, niente spam e puoi cancellarti in qualsiasi momento.",
                 aboutTitle: "Chi sono",
-                aboutDesc: "Sono Michele Siddi, ingegnere informatico e content creator. Dopo anni nella consulenza IT e nella cybersecurity ho deciso di trasformare esperienza e metodi in contenuti: news, articoli, video e paper per aiutare aziende e professionisti a orientarsi nell'innovazione.",
-                aboutList: [
-                    "Approfondimenti indipendenti su cybersecurity, AI, cloud e trasformazione digitale.",
-                    "Format divulgativi con esempi pratici, checklist e framework da riutilizzare nei team.",
-                    "Collaborazioni con community tech, università e aziende per eventi e mentorship."
-                ],
-                aboutBadges: ["Newsroom tech", "Cybersecurity", "Intelligenza artificiale", "Cloud", "Open source", "Community"],
+                aboutDesc: "Ciao! Sono Michele, nato a Cagliari nel 1989 e appassionato di tecnologia fin da giovane. Subito dopo il diploma ho iniziato a lavorare in una catena di informatica come addetto alle vendite, e ho imparato da autodidatta fino a diventare tecnico informatico nella stessa azienda.",
+                aboutJourney: "Con il tempo mi sono avvicinato alla programmazione e la mia passione è continuata a crescere, conseguendo anche la laurea in informatica. Da circa 10 anni lavoro in Amazon ricoprendo ruoli di responsabilità.",
+                aboutFocus: "Qui troverai news sul mondo tech, articoli e tutorial, con un focus particolare sull'intelligenza artificiale.",
                 portfolioTitle: "Progetti & collaborazioni",
                 portfolioSubtitle: "Una selezione di lavori dedicati a divulgazione, formazione e strategia digitale.",
                 portfolioCards: [
@@ -515,7 +500,7 @@
                 heroSubtitle: "Cybersecurity, AI, cloud and tech culture explained with a hands-on approach.",
                 ctaNewsletter: "Join the newsletter",
                 ctaYoutube: "Subscribe on YouTube",
-                nav: ["News", "Articles", "Papers", "Videos", "About", "Projects", "Blog", "Contact"],
+                nav: ["About", "News", "Articles", "Papers", "Videos", "Projects", "Blog", "Contact"],
                 newsTitle: "Latest tech news",
                 newsSubtitle: "Daily coverage on policy, security and digital innovation.",
                 newsCards: [
@@ -557,13 +542,9 @@
                 newsletterButton: "Subscribe now",
                 newsletterNote: "Delivered every Friday morning, no spam and you can unsubscribe anytime.",
                 aboutTitle: "About me",
-                aboutDesc: "I'm Michele Siddi, an Italian software engineer and content creator. After years in IT consulting and cybersecurity I turned that experience into stories: news, articles, videos and papers to help teams navigate innovation.",
-                aboutList: [
-                    "Independent analysis on cybersecurity, AI, cloud and digital transformation.",
-                    "Formats packed with practical examples, checklists and reusable frameworks for your teams.",
-                    "Partnerships with tech communities, universities and companies for events and mentorship initiatives."
-                ],
-                aboutBadges: ["Tech newsroom", "Cybersecurity", "Artificial intelligence", "Cloud", "Open source", "Community"],
+                aboutDesc: "Hi! I'm Michele, born in Cagliari in 1989 and passionate about technology since I was a kid. Right after graduating high school I worked in a computer retail chain as a sales assistant and taught myself until I became the in-house IT technician.",
+                aboutJourney: "Over time I moved closer to software development and kept nurturing that passion, eventually graduating in computer science. I've spent the last 10 years at Amazon taking on leadership roles.",
+                aboutFocus: "Here you'll find tech news, articles and tutorials with a special focus on artificial intelligence.",
                 portfolioTitle: "Projects & partnerships",
                 portfolioSubtitle: "Highlights focused on education, content strategy and digital culture.",
                 portfolioCards: [
@@ -589,7 +570,7 @@
             document.getElementById('hero-subtitle').textContent = data.heroSubtitle;
             document.getElementById('cta-newsletter').textContent = data.ctaNewsletter;
             document.getElementById('cta-youtube').textContent = data.ctaYoutube;
-            const navIds = ['nav-news','nav-articles','nav-papers','nav-videos','nav-about','nav-portfolio','nav-blog','nav-contact'];
+            const navIds = ['nav-about','nav-news','nav-articles','nav-papers','nav-videos','nav-portfolio','nav-blog','nav-contact'];
             navIds.forEach((id, i) => {
                 document.getElementById(id).textContent = data.nav[i];
             });
@@ -648,8 +629,8 @@
             document.getElementById('newsletter-note').textContent = data.newsletterNote;
             document.getElementById('about-title').textContent = data.aboutTitle;
             document.getElementById('about-desc').textContent = data.aboutDesc;
-            document.getElementById('about-list').innerHTML = data.aboutList.map(item => `<li>${item}</li>`).join('');
-            document.getElementById('about-badges').innerHTML = data.aboutBadges.map(badge => `<span class="badge">${badge}</span>`).join('');
+            document.getElementById('about-journey').textContent = data.aboutJourney;
+            document.getElementById('about-focus').textContent = data.aboutFocus;
             document.getElementById('portfolio-title').textContent = data.portfolioTitle;
             document.getElementById('portfolio-subtitle').textContent = data.portfolioSubtitle;
             const portfolioCards = document.querySelectorAll('.portfolio-card');
