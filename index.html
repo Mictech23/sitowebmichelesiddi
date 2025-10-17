@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Siddi — IT Expert| Tech News & Articles</title>
-    <meta name="description" content="Portfolio professionale di Michele Siddi: sviluppo software, cybersecurity, cloud computing e AI. Blog con articoli tech, guide pratiche e ultime news dal mondo tecnologico.">
-    <meta name="keywords" content="Michele Siddi, IT Expert, Software Engineer, Cybersecurity, Cloud Computing, Intelligenza Artificiale, AI, Portfolio, Blog Tech, News Tecnologia, Sviluppo Web, App Development">
+    <title>Michele Siddi — IT Expert | Consulenza, Sviluppo & Cybersecurity</title>
+    <meta name="description" content="Sito ufficiale di Michele Siddi: consulente IT, software engineer e cybersecurity specialist. Portfolio, servizi, casi studio e risorse per trasformare le tue idee in soluzioni digitali sicure.">
+    <meta name="keywords" content="Michele Siddi, consulente IT, software engineer, cybersecurity specialist, cloud architect, sviluppo software, trasformazione digitale, consulenza tecnologica, portfolio, articoli tecnologia">
     <meta name="author" content="Michele Siddi">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#1864ab" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#151a2a" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="https://mictech23.github.io/michelesiddi/">
     <link rel="alternate" hreflang="it" href="https://mictech23.github.io/michelesiddi/">
     <link rel="alternate" hreflang="en" href="https://mictech23.github.io/michelesiddi/?lang=en">
     <link rel="alternate" hreflang="x-default" href="https://mictech23.github.io/michelesiddi/">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <!-- Open Graph -->
-    <meta property="og:title" content="Michele Siddi - IT Expert ">
-    <meta property="og:description" content="Portfolio professionale di Michele Siddi: sviluppo software, cybersecurity, cloud e AI. Blog con articoli tech, guide pratiche e ultime news tecnologiche.">
+    <meta property="og:site_name" content="Michele Siddi">
+    <meta property="og:title" content="Michele Siddi - IT Expert e Consulente IT">
+    <meta property="og:description" content="Consulenza IT, sviluppo software, cybersecurity e strategie cloud per aziende e professionisti. Scopri portfolio, servizi e articoli.">
     <meta property="og:image" content="https://mictech23.github.io/michelesiddi/foto-profilo.jpg">
     <meta property="og:url" content="https://mictech23.github.io/michelesiddi/">
     <meta property="og:type" content="website">
@@ -24,12 +27,14 @@
     <meta property="og:locale:alternate" content="en_US">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Michele Siddi - IT Expert">
-    <meta name="twitter:description" content="Portfolio professionale di Michele Siddi: sviluppo software, cybersecurity, cloud e AI. Blog con articoli tech, guide pratiche e ultime news.">
+    <meta name="twitter:title" content="Michele Siddi - IT Expert e Consulente IT">
+    <meta name="twitter:description" content="Consulenza IT, sviluppo software, cybersecurity e strategie cloud per aziende e professionisti.">
     <meta name="twitter:image" content="https://mictech23.github.io/michelesiddi/foto-profilo.jpg">
     <meta name="twitter:site" content="@MicheleSiddi">
     <meta name="twitter:creator" content="@MicheleSiddi">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Structured Data for SEO -->
@@ -41,7 +46,8 @@
         "jobTitle": "IT Expert, Software Engineer, Cybersecurity Specialist",
         "url": "https://mictech23.github.io/michelesiddi/",
         "sameAs": [
-            "https://www.linkedin.com/in/michele-siddi-776172131/"
+            "https://www.linkedin.com/in/michele-siddi-776172131/",
+            "https://github.com/MicTech23"
         ],
         "image": "https://mictech23.github.io/michelesiddi/foto-profilo.jpg",
         "description": "IT Expert specializing in software development, cybersecurity, cloud computing and artificial intelligence",
@@ -62,53 +68,85 @@
         }
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Michele Siddi IT Consulting",
+        "image": "https://mictech23.github.io/michelesiddi/foto-profilo.jpg",
+        "url": "https://mictech23.github.io/michelesiddi/",
+        "areaServed": "Italia",
+        "serviceType": [
+            "Consulenza IT",
+            "Sviluppo software",
+            "Cybersecurity",
+            "Cloud architecture"
+        ],
+        "priceRange": "€€",
+        "availableLanguage": ["it", "en"],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "michelesiddi.ms@gmail.com",
+            "availableLanguage": ["it", "en"]
+        }
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Salta al contenuto principale</a>
     <!-- LANG & MODE SWITCH -->
-    <div class="lang-switch">
-        <button class="active" id="lang-it">IT</button>
-        <button id="lang-en">EN</button>
+    <div class="lang-switch" role="group" aria-label="Cambia lingua">
+        <button class="active" id="lang-it" type="button">IT</button>
+        <button id="lang-en" type="button">EN</button>
     </div>
-    <div class="mode-switch">
-        <button id="mode-light" title="Light mode"><i class="fa-regular fa-sun"></i></button>
-        <button id="mode-dark" title="Dark mode"><i class="fa-regular fa-moon"></i></button>
+    <div class="mode-switch" role="group" aria-label="Cambia tema">
+        <button id="mode-light" title="Modalità chiara" type="button"><i class="fa-regular fa-sun" aria-hidden="true"></i><span class="sr-only">Attiva tema chiaro</span></button>
+        <button id="mode-dark" title="Modalità scura" type="button"><i class="fa-regular fa-moon" aria-hidden="true"></i><span class="sr-only">Attiva tema scuro</span></button>
     </div>
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-avatar"><img src="foto-profilo.jpg" alt="Michele Siddi"></div>
-            <h1 class="hero-title" id="hero-title">Michele Siddi</h1>
-            <div class="hero-payoff" id="hero-payoff">Capire la tecnologia, insieme.</div>
-            <p class="hero-subtitle" id="hero-subtitle">Esperto IT &bull; Software Engineer &bull; Cybersecurity Specialist</p>
-            <div class="hero-cta">
-                <a href="#contact" id="cta-contact"><i class="fa-solid fa-paper-plane"></i> Contattami</a>
-                <a href="https://www.linkedin.com/in/michele-siddi-776172131/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+    <header class="site-header">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <div class="hero-avatar">
+                    <img src="foto-profilo.jpg" alt="Ritratto professionale di Michele Siddi" loading="lazy">
+                </div>
+                <h1 class="hero-title" id="hero-title">Michele Siddi</h1>
+                <p class="hero-payoff" id="hero-payoff">Strategia, sicurezza e software per far crescere il tuo business digitale.</p>
+                <p class="hero-subtitle" id="hero-subtitle">Esperto IT &bull; Software Engineer &bull; Cybersecurity Specialist</p>
+                <div class="hero-cta">
+                    <a href="#contact" id="cta-contact" class="btn-primary"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contattami</a>
+                    <a href="https://www.linkedin.com/in/michele-siddi-776172131/" target="_blank" rel="noopener" class="btn-secondary"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- NAVBAR -->
-    <nav>
-        <a href="#about" class="active" id="nav-about">About me</a>
-        <a href="#services" id="nav-services">Servizi</a>
-        <a href="#news" id="nav-news">News</a>
-        <a href="#portfolio" id="nav-portfolio">Portfolio</a>
-        <a href="#articles" id="nav-articles">Articoli</a>
-        <a href="{{ '/blog.html' | relative_url }}" id="nav-blog">Blog</a>
-        <a href="#contact" id="nav-contact">Contatti</a>
-    </nav>
-    <div class="container">
+        </section>
+        <nav aria-label="Navigazione principale">
+            <a href="#about" class="active" id="nav-about">Chi sono</a>
+            <a href="#skills" id="nav-skills">Competenze</a>
+            <a href="#services" id="nav-services">Servizi</a>
+            <a href="#highlights" id="nav-highlights">Risultati</a>
+            <a href="#news" id="nav-news">News</a>
+            <a href="#portfolio" id="nav-portfolio">Portfolio</a>
+            <a href="#articles" id="nav-articles">Articoli</a>
+            <a href="{{ '/blog.html' | relative_url }}" id="nav-blog">Blog</a>
+            <a href="#contact" id="nav-contact">Contatti</a>
+        </nav>
+    </header>
+    <main id="main-content" class="container" tabindex="-1">
         <!-- CHI SONO -->
-        <section id="about" class="about">
+        <section id="about" class="about" aria-labelledby="about-title">
             <div class="about-col">
                 <div class="about-text" id="about-text">
-                    <h2 class="section-title" id="about-desc">About me</h2>
+                    <h2 class="section-title" id="about-title">Chi sono</h2>
                     <p id="about-desc">
-                        Ciao! Sono Michele, nato a Cagliari nel 1989 e appassionato di tecnologia fin da giovane. Dopo il diploma, ho iniziato a lavorare come addetto alle vendite in una catena di computer, e ho imparato da autodidatta, diventando presto tecnico informatico: assemblaggio e riparazione di PC, configurazione reti, troubleshooting e assistenza hardware/software.
-                       Con il tempo mi sono avvicinato alla programmazione e attualmente sto anche conseguendo la laurea in Informatica. Da circa 10 anni lavoro in Amazon come Supervisor, e ho ricoperto anche il ruolo di Team Manager.
-                       Questo è un luogo di divulgazione scientifica, troverai articoli, guide e news, con un focus speciale sull’Intelligenza Artificiale, per chi vuole capire, imparare e restare aggiornato.<br>
-                        Offro anche consulenze personalizzate e supporto tecnico per privati, aziende e professionisti.
-                        <span style="font-weight:600;">Mi occupo di sviluppo software, sicurezza, cloud e strategie digitali.</span>
+                        Ciao! Sono Michele, consulente IT con base a Cagliari. Aiuto aziende e professionisti a progettare soluzioni digitali sicure e scalabili, dall’idea alla messa in produzione.
+                        Dopo gli inizi come tecnico hardware ho guidato team in Amazon, specializzandomi su sviluppo software, cloud e sicurezza.
+                        Questo spazio nasce per condividere conoscenza: articoli, guide pratiche e aggiornamenti per capire davvero come la tecnologia può portare valore.
                     </p>
+                    <ul class="about-highlights" id="about-list">
+                        <li>Approccio end-to-end: analisi, design, sviluppo, delivery e misurazione dei risultati.</li>
+                        <li>Esperienza su progetti internazionali in ambito e-commerce, automazione e AI applicata.</li>
+                        <li>Supporto continuo: formazione su misura, governance della sicurezza e ottimizzazione costi cloud.</li>
+                    </ul>
                     <div class="about-badges" id="about-badges">
                         <span class="badge">Cloud</span>
                         <span class="badge">AI</span>
@@ -119,94 +157,151 @@
                     </div>
                 </div>
             </div>
-        
+        </section>
+        <section id="skills" class="skills" aria-labelledby="skills-title">
+            <div class="section-heading">
+                <h2 class="section-title" id="skills-title">Competenze chiave</h2>
+                <p class="section-subtitle" id="skills-subtitle">Dalla definizione della strategia alla gestione operativa, affianco il cliente in ogni fase del ciclo di vita del software.</p>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3 id="skill-1-title">Strategia &amp; Discovery</h3>
+                    <p id="skill-1-desc">Workshop, analisi di fattibilità e roadmap per trasformare gli obiettivi di business in soluzioni digitali concrete.</p>
+                    <ul class="skill-points" id="skill-1-list">
+                        <li>Analisi stakeholder e priorità</li>
+                        <li>Value proposition &amp; KPI condivisi</li>
+                        <li>Documentazione tecnica e funzionale</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <h3 id="skill-2-title">Engineering &amp; Delivery</h3>
+                    <p id="skill-2-desc">Sviluppo full-stack con stack moderni, infrastruttura cloud e automazioni DevOps per rilasci rapidi e affidabili.</p>
+                    <ul class="skill-points" id="skill-2-list">
+                        <li>Architetture cloud native</li>
+                        <li>CI/CD, Infrastructure as Code</li>
+                        <li>API-first e integrazione sistemi legacy</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <h3 id="skill-3-title">Cybersecurity &amp; AI</h3>
+                    <p id="skill-3-desc">Governance della sicurezza, analisi dei rischi e adozione responsabile di soluzioni AI generative e predittive.</p>
+                    <ul class="skill-points" id="skill-3-list">
+                        <li>Threat modeling e piani di remediation</li>
+                        <li>Security assessment e formazione</li>
+                        <li>Implementazione agenti e workflow AI</li>
+                    </ul>
+                </article>
+            </div>
         </section>
         <!-- SERVIZI -->
-        <section id="services">
+        <section id="services" aria-labelledby="services-title">
             <h2 class="section-title" id="services-title">Servizi</h2>
+            <p class="section-subtitle" id="services-subtitle">Soluzioni su misura per crescere in modo sicuro e sostenibile, con metriche chiare e team allineati sugli obiettivi.</p>
             <div class="services" id="services-list">
                 <div class="service">
-                    <span class="service-icon"><i class="fa-solid fa-laptop-code"></i></span>
-                    <h3 id="service-web">Sviluppo Siti Web</h3>
+                    <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+                    <h3 id="service-web">Sviluppo siti e piattaforme</h3>
                     <p id="service-web-desc">
-                        Siti moderni, responsive e ottimizzati, su misura per identità e business. Esperienze digitali di alto livello.
+                        Progetto e sviluppo prodotti digitali performanti, SEO friendly e accessibili. Dalla prototipazione UX/UI al go-live.
                     </p>
                 </div>
                 <div class="service">
-                    <span class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
-                    <h3 id="service-app">Sviluppo App</h3>
+                    <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                    <h3 id="service-app">App &amp; integrazioni</h3>
                     <p id="service-app-desc">
-                        App mobile & web, intuitive e personalizzate per aziende e progetti innovativi.
+                        Soluzioni mobile, backend e API per connettere servizi esistenti, automatizzare processi e migliorare l’esperienza utente.
                     </p>
                 </div>
                 <div class="service">
-                    <span class="service-icon"><i class="fa-solid fa-shield-halved"></i></span>
-                    <h3 id="service-cyber">Cybersecurity & Consulenza IT</h3>
+                    <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></span>
+                    <h3 id="service-cyber">Cybersecurity &amp; compliance</h3>
                     <p id="service-cyber-desc">
-                        Difesa, assessment, compliance, formazione e soluzioni di sicurezza per aziende e professionisti.
+                        Valutazioni di sicurezza, hardening infrastrutturale, incident response e percorsi di formazione per il tuo team.
                     </p>
                 </div>
                 <div class="service">
-                    <span class="service-icon"><i class="fa-solid fa-chart-line"></i></span>
-                    <h3 id="service-marketing">Strategia Digitale & Marketing</h3>
+                    <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>
+                    <h3 id="service-marketing">Growth &amp; marketing tech</h3>
                     <p id="service-marketing-desc">
-                        Strategie complete: SEO, social, content, automazioni per far crescere la tua attività.
+                        SEO, analytics, content strategy e automazioni per generare lead qualificati e ottimizzare l’investimento digitale.
                     </p>
                 </div>
                 <div class="service">
-                    <span class="service-icon"><i class="fa-solid fa-lightbulb"></i></span>
-                    <h3 id="service-strategy">Consulenza Strategica</h3>
+                    <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></span>
+                    <h3 id="service-strategy">Advisory continuo</h3>
                     <p id="service-strategy-desc">
-                        Analisi, pianificazione e supporto alla trasformazione digitale e all’innovazione.
+                        Affiancamento strategico per roadmap tecnologiche, valutazione fornitori, governance e gestione del cambiamento.
                     </p>
+                </div>
+            </div>
+        </section>
+        <section id="highlights" class="highlights" aria-labelledby="highlights-title">
+            <h2 class="section-title" id="highlights-title">Risultati in numeri</h2>
+            <p class="section-subtitle" id="highlights-subtitle">Metriche che raccontano l’impatto dei progetti seguiti negli ultimi anni.</p>
+            <div class="highlight-grid">
+                <div class="highlight-card">
+                    <span class="highlight-metric" id="highlight-metric-1">10+</span>
+                    <span class="highlight-label" id="highlight-label-1">anni di esperienza tra delivery e leadership tech</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-metric" id="highlight-metric-2">35</span>
+                    <span class="highlight-label" id="highlight-label-2">progetti digitali consegnati con KPI monitorati</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-metric" id="highlight-metric-3">98%</span>
+                    <span class="highlight-label" id="highlight-label-3">customer satisfaction e NPS positivo su consulenze continuative</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-metric" id="highlight-metric-4">4</span>
+                    <span class="highlight-label" id="highlight-label-4">certificazioni cloud &amp; security attive</span>
                 </div>
             </div>
         </section>
         <!-- NEWS -->
         <section id="news" class="news-section">
             <h2 class="section-title" id="news-title">News Tech</h2>
-            <p style="text-align: center; margin-bottom: 30px; color: #666;" id="news-subtitle">
+            <p class="section-subtitle" id="news-subtitle">
                 Le ultime notizie dal mondo della tecnologia
             </p>
             <div class="news-grid">
                 <div class="news-card">
-                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 15 Ottobre 2025</div>
-                    <h3 class="news-card-title">OpenAI lancia GPT-5: Intelligenza Artificiale di nuova generazione</h3>
-                    <p class="news-card-desc">OpenAI annuncia GPT-5, il nuovo modello di linguaggio con capacità di ragionamento multimodale avanzate e comprensione contestuale senza precedenti.</p>
+                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 22 Novembre 2024</div>
+                    <h3 class="news-card-title">AI Act: approvata la prima normativa europea sull’intelligenza artificiale</h3>
+                    <p class="news-card-desc">Il Parlamento europeo ha dato il via libera definitivo al regolamento che introduce obblighi di trasparenza, governance dei dati e gestione del rischio per i sistemi AI.</p>
                     <div class="news-tags">
-                        <span class="news-tag">AI</span>
-                        <span class="news-tag">OpenAI</span>
-                        <span class="news-tag">LLM</span>
+                        <span class="news-tag">AI Act</span>
+                        <span class="news-tag">Regolamentazione</span>
+                        <span class="news-tag">Europa</span>
                     </div>
                 </div>
                 <div class="news-card">
-                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 14 Ottobre 2025</div>
-                    <h3 class="news-card-title">Google lancia Quantum Processor: rivoluzione nel calcolo quantistico</h3>
-                    <p class="news-card-desc">Google presenta il suo nuovo processore quantistico da 1000 qubit, aprendo nuove frontiere nella ricerca scientifica e nella crittografia.</p>
+                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 5 Novembre 2024</div>
+                    <h3 class="news-card-title">NIS2: pubblicate le linee guida per la cybersecurity delle PMI</h3>
+                    <p class="news-card-desc">ENISA ha diffuso un framework operativo per aiutare imprese e pubbliche amministrazioni ad allinearsi alla direttiva europea sulla sicurezza delle reti e dei sistemi informativi.</p>
                     <div class="news-tags">
-                        <span class="news-tag">Quantum</span>
-                        <span class="news-tag">Google</span>
-                        <span class="news-tag">Innovation</span>
+                        <span class="news-tag">Cybersecurity</span>
+                        <span class="news-tag">NIS2</span>
+                        <span class="news-tag">Governance</span>
                     </div>
                 </div>
                 <div class="news-card">
-                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 13 Ottobre 2025</div>
-                    <h3 class="news-card-title">Meta presenta Reality OS: sistema operativo per il metaverso</h3>
-                    <p class="news-card-desc">Meta svela Reality OS, il sistema operativo dedicato alla realtà virtuale e aumentata, con integrazione nativa di AI e spatial computing.</p>
-                    <div class="news-tags">
-                        <span class="news-tag">Meta</span>
-                        <span class="news-tag">VR/AR</span>
-                        <span class="news-tag">Metaverso</span>
-                    </div>
-                </div>
-                <div class="news-card">
-                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 12 Ottobre 2025</div>
-                    <h3 class="news-card-title">Microsoft Azure: nuovo servizio di AI Security</h3>
-                    <p class="news-card-desc">Microsoft introduce AI Security Suite su Azure, offrendo protezione automatizzata basata su intelligenza artificiale per le infrastrutture cloud.</p>
+                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 18 Ottobre 2024</div>
+                    <h3 class="news-card-title">Google Cloud potenzia le regioni europee con dati a sovranità controllata</h3>
+                    <p class="news-card-desc">Annunciata la disponibilità di nuovi controlli di residenza dei dati e chiavi di cifratura gestite dal cliente per settori regolamentati.</p>
                     <div class="news-tags">
                         <span class="news-tag">Cloud</span>
-                        <span class="news-tag">Cybersecurity</span>
-                        <span class="news-tag">Azure</span>
+                        <span class="news-tag">Sovereign</span>
+                        <span class="news-tag">Google Cloud</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-date"><i class="fa-solid fa-calendar"></i> 2 Ottobre 2024</div>
+                    <h3 class="news-card-title">Microsoft introduce Copilot Studio per automatizzare i processi aziendali</h3>
+                    <p class="news-card-desc">La piattaforma low-code permette di creare agenti personalizzati con controlli di sicurezza centralizzati e connettori verso i principali SaaS.</p>
+                    <div class="news-tags">
+                        <span class="news-tag">Automation</span>
+                        <span class="news-tag">Microsoft</span>
+                        <span class="news-tag">AI</span>
                     </div>
                 </div>
             </div>
@@ -216,45 +311,47 @@
             <h2 class="section-title" id="portfolio-title">Portfolio</h2>
             <div class="portfolio-slider" id="portfolio-slider">
                 <div class="portfolio-card">
-                    <img class="portfolio-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Progetto 1">
-                    <div class="portfolio-title">E-commerce Cloud</div>
+                    <img class="portfolio-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Dashboard e-commerce in cloud" loading="lazy">
+                    <div class="portfolio-title">Retail360: piattaforma e-commerce cloud</div>
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">AWS</span>
                         <span class="portfolio-tag">React</span>
                         <span class="portfolio-tag">Node.js</span>
                     </div>
-                    <div>Realizzazione piattaforma e-commerce scalabile, integrazione pagamenti e automazioni.</div>
+                    <p class="portfolio-desc">Migrazione da monolite legacy a microservizi su AWS, orchestrazione Kubernetes e automazione dei processi di fulfillment. +42% di ordini gestiti senza downtime.</p>
                 </div>
                 <div class="portfolio-card">
-                    <img class="portfolio-img" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80" alt="Progetto 2">
-                    <div class="portfolio-title">App Sicurezza Mobile</div>
+                    <img class="portfolio-img" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="App mobile di sicurezza" loading="lazy">
+                    <div class="portfolio-title">SecureOps: mobile app per incident response</div>
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">Android</span>
-                        <span class="portfolio-tag">Cybersecurity</span>
+                        <span class="portfolio-tag">Firebase</span>
+                        <span class="portfolio-tag">Security</span>
                     </div>
-                    <div>App per la protezione dei dati personali e aziendali con alert in tempo reale.</div>
+                    <p class="portfolio-desc">Sviluppo di un’applicazione mobile per incident management con cifratura end-to-end, gestione dei playbook e notifiche push integrate con SIEM aziendale.</p>
                 </div>
                 <div class="portfolio-card">
-                    <img class="portfolio-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Progetto 3">
-                    <div class="portfolio-title">AI Chatbot</div>
+                    <img class="portfolio-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Interfaccia di un chatbot AI" loading="lazy">
+                    <div class="portfolio-title">HelpDesk AI: assistente virtuale omnicanale</div>
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">AI</span>
                         <span class="portfolio-tag">Python</span>
+                        <span class="portfolio-tag">RAG</span>
                     </div>
-                    <div>Chatbot intelligente.</div>
+                    <p class="portfolio-desc">Implementazione di un chatbot con retrieval augmented generation e integrazione CRM. Riduzione del 35% dei tempi medi di risposta del supporto.</p>
                 </div>
             </div>
         </section>
         <!-- ARTICOLI -->
         <section id="articles" class="articles-section">
             <h2 class="section-title" id="articles-title">Ultimi Articoli</h2>
-            <p style="text-align: center; margin-bottom: 30px; color: #666;">
+            <p class="section-subtitle" id="articles-subtitle">
                 Scopri articoli su tecnologia, cybersecurity, AI e innovazione
             </p>
             <div class="articles-list" id="articles-list">
                 <a href="articles/guidaAI.html" class="article-card-link">
                     <div class="article-card">
-                        <img class="article-thumb" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="AI Agent">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="AI Agent" loading="lazy">
                         <div class="article-content">
                             <div class="article-title">Agenti AI: La Guida Definitiva per Sviluppatori Italiani (Casi d'Uso e Tutorial con Python) <i class="fa-solid fa-arrow-right"></i></div>
                             <div class="article-meta">10 ottobre 2025</div>
@@ -264,7 +361,7 @@
                 </a>
                 <a href="articles/llm.html" class="article-card-link">
                     <div class="article-card">
-                        <img class="article-thumb" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="LLM">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="LLM" loading="lazy">
                         <div class="article-content">
                             <div class="article-title">LLM: Cos’è un Large Language Model? <i class="fa-solid fa-arrow-right"></i></div>
                             <div class="article-meta">8 ottobre 2025</div>
@@ -274,7 +371,7 @@
                 </a>
                 <a href="articles/cybersecurity-basics.html" class="article-card-link">
                     <div class="article-card">
-                        <img class="article-thumb" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Cybersecurity" loading="lazy">
                         <div class="article-content">
                             <div class="article-title">Cybersecurity: i concetti base <i class="fa-solid fa-arrow-right"></i></div>
                             <div class="article-meta">5 ottobre 2025</div>
@@ -284,7 +381,7 @@
                 </a>
                 <a href="articles/python-hero.html" class="article-card-link">
                     <div class="article-card">
-                        <img class="article-thumb" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80" alt="Python">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Python" loading="lazy">
                         <div class="article-content">
                             <div class="article-title">Corso Python da zero a hero <i class="fa-solid fa-arrow-right"></i></div>
                             <div class="article-meta">2 ottobre 2025</div>
@@ -294,7 +391,7 @@
                 </a>
                 <a href="articles/html-course.html" class="article-card-link">
                     <div class="article-card">
-                        <img class="article-thumb" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="HTML">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="HTML" loading="lazy">
                         <div class="article-content">
                             <div class="article-title">Corso HTML: crea la tua prima pagina web <i class="fa-solid fa-arrow-right"></i></div>
                             <div class="article-meta">28 settembre 2025</div>
@@ -304,7 +401,7 @@
                 </a>
                 <a href="articles/fullstack-course.html" class="article-card-link">
                     <div class="article-card">
-                        <img class="article-thumb" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Full Stack">
+                        <img class="article-thumb" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Full Stack" loading="lazy">
                         <div class="article-content">
                             <div class="article-title">Corso Full Stack: frontend e backend per tutti <i class="fa-solid fa-arrow-right"></i></div>
                             <div class="article-meta">25 settembre 2025</div>
@@ -320,16 +417,21 @@
             </div>
         </section>
         <!-- CONTATTI -->
-        <section id="contact">
+        <section id="contact" aria-labelledby="contact-title">
             <h2 class="section-title" id="contact-title">Contatti</h2>
-            <form class="contact-form" autocomplete="off">
-                <input type="text" name="name" placeholder="Il tuo nome" required>
-                <input type="email" name="email" placeholder="La tua email" required>
-                <textarea name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Invia messaggio</button>
+            <p class="section-subtitle" id="contact-subtitle">Raccontami la tua sfida: rispondo entro 24 ore con una prima valutazione gratuita.</p>
+            <form class="contact-form" autocomplete="off" aria-describedby="contact-privacy">
+                <label class="sr-only" for="contact-name">Nome</label>
+                <input type="text" id="contact-name" name="name" placeholder="Il tuo nome" required>
+                <label class="sr-only" for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" placeholder="La tua email" required>
+                <label class="sr-only" for="contact-message">Messaggio</label>
+                <textarea id="contact-message" name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+                <button type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Invia messaggio</button>
             </form>
+            <p class="form-note" id="contact-privacy">I dati inviati saranno utilizzati solo per rispondere alla tua richiesta, secondo l’informativa privacy.</p>
         </section>
-    </div>
+    </main>
     <!-- FOOTER -->
     <footer>
         <div class="footer-social">
@@ -345,95 +447,198 @@
         // Multilingua dinamica
         const translations = {
             it: {
-                heroPayoff: "Curiosità, tecnologia, scoperta.",
-                heroSubtitle: "IT expert",
+                heroPayoff: "Strategia, sicurezza e software per far crescere il tuo business digitale.",
+                heroSubtitle: "IT Expert &bull; Software Engineer &bull; Cybersecurity Specialist",
                 ctaContact: '<i class="fa-solid fa-paper-plane"></i> Contattami',
-                nav: ["Chi sono", "Servizi", "News", "Portfolio", "Articoli", "Contatti"],
+                nav: ["Chi sono", "Competenze", "Servizi", "Risultati", "News", "Portfolio", "Articoli", "Contatti"],
                 aboutTitle: "Chi sono",
-                aboutDesc: `Questo è il mio spazio dedicato all’informatica e all’innovazione.<br>
-                        Qui condivido articoli, guide e news sul mondo della tecnologia, con un focus speciale su Intelligenza Artificiale.<br>
-                        Un punto d’incontro per chi vuole capire, imparare e restare aggiornato.<br>
-                        Offro anche consulenze personalizzate e supporto tecnico per privati, aziende e professionisti.<br>
-                        <span style="font-weight:600;">Mi occupo di sviluppo software, sicurezza, cloud e strategie digitali.</span>`,
+                aboutDesc: `Ciao! Sono Michele, consulente IT con base a Cagliari. Aiuto aziende e professionisti a progettare soluzioni digitali sicure e scalabili, dall’idea alla messa in produzione.<br>Dopo gli inizi come tecnico hardware ho guidato team in Amazon, specializzandomi su sviluppo software, cloud e sicurezza.<br>Questo spazio nasce per condividere conoscenza: articoli, guide pratiche e aggiornamenti per capire davvero come la tecnologia può portare valore.`,
+                aboutList: [
+                    "Approccio end-to-end: analisi, design, sviluppo, delivery e misurazione dei risultati.",
+                    "Esperienza su progetti internazionali in ambito e-commerce, automazione e AI applicata.",
+                    "Supporto continuo: formazione su misura, governance della sicurezza e ottimizzazione costi cloud."
+                ],
+                skillsTitle: "Competenze chiave",
+                skillsSubtitle: "Dalla definizione della strategia alla gestione operativa, affianco il cliente in ogni fase del ciclo di vita del software.",
+                skills: [
+                    {title: "Strategia & Discovery", desc: "Workshop, analisi di fattibilità e roadmap per trasformare gli obiettivi di business in soluzioni digitali concrete.", points: ["Analisi stakeholder e priorità", "Value proposition & KPI condivisi", "Documentazione tecnica e funzionale"]},
+                    {title: "Engineering & Delivery", desc: "Sviluppo full-stack con stack moderni, infrastruttura cloud e automazioni DevOps per rilasci rapidi e affidabili.", points: ["Architetture cloud native", "CI/CD, Infrastructure as Code", "API-first e integrazione sistemi legacy"]},
+                    {title: "Cybersecurity & AI", desc: "Governance della sicurezza, analisi dei rischi e adozione responsabile di soluzioni AI generative e predittive.", points: ["Threat modeling e piani di remediation", "Security assessment e formazione", "Implementazione agenti e workflow AI"]}
+                ],
                 servicesTitle: "Servizi",
+                servicesSubtitle: "Soluzioni su misura per crescere in modo sicuro e sostenibile, con metriche chiare e team allineati sugli obiettivi.",
                 services: [
-                    {title:"Sviluppo Siti Web",desc:"Siti moderni, responsive e ottimizzati, su misura per identità e business. Esperienze digitali di alto livello."},
-                    {title:"Sviluppo App",desc:"App mobile & web, intuitive e personalizzate per aziende e progetti innovativi."},
-                    {title:"Cybersecurity & Consulenza IT",desc:"Difesa, assessment, compliance, formazione e soluzioni di sicurezza per aziende e professionisti."},
-                    {title:"Strategia Digitale & Marketing",desc:"Strategie complete: SEO, social, content, automazioni per far crescere la tua attività."},
-                    {title:"Consulenza Strategica",desc:"Analisi, pianificazione e supporto alla trasformazione digitale e all’innovazione."}
+                    {title:"Sviluppo siti e piattaforme",desc:"Progetto e sviluppo prodotti digitali performanti, SEO friendly e accessibili. Dalla prototipazione UX/UI al go-live."},
+                    {title:"App & integrazioni",desc:"Soluzioni mobile, backend e API per connettere servizi esistenti, automatizzare processi e migliorare l’esperienza utente."},
+                    {title:"Cybersecurity & compliance",desc:"Valutazioni di sicurezza, hardening infrastrutturale, incident response e percorsi di formazione per il tuo team."},
+                    {title:"Growth & marketing tech",desc:"SEO, analytics, content strategy e automazioni per generare lead qualificati e ottimizzare l’investimento digitale."},
+                    {title:"Advisory continuo",desc:"Affiancamento strategico per roadmap tecnologiche, valutazione fornitori, governance e gestione del cambiamento."}
+                ],
+                highlightsTitle: "Risultati in numeri",
+                highlightsSubtitle: "Metriche che raccontano l’impatto dei progetti seguiti negli ultimi anni.",
+                highlights: [
+                    {metric: "10+", label: "anni di esperienza tra delivery e leadership tech"},
+                    {metric: "35", label: "progetti digitali consegnati con KPI monitorati"},
+                    {metric: "98%", label: "customer satisfaction e NPS positivo su consulenze continuative"},
+                    {metric: "4", label: "certificazioni cloud & security attive"}
                 ],
                 newsTitle: "News Tech",
                 newsSubtitle: "Le ultime notizie dal mondo della tecnologia",
+                newsCards: [
+                    {date: "22 Novembre 2024", title: "AI Act: approvata la prima normativa europea sull’intelligenza artificiale", desc: "Il Parlamento europeo ha dato il via libera definitivo al regolamento che introduce obblighi di trasparenza, governance dei dati e gestione del rischio per i sistemi AI.", tags: ["AI Act", "Regolamentazione", "Europa"]},
+                    {date: "5 Novembre 2024", title: "NIS2: pubblicate le linee guida per la cybersecurity delle PMI", desc: "ENISA ha diffuso un framework operativo per aiutare imprese e pubbliche amministrazioni ad allinearsi alla direttiva europea sulla sicurezza delle reti e dei sistemi informativi.", tags: ["Cybersecurity", "NIS2", "Governance"]},
+                    {date: "18 Ottobre 2024", title: "Google Cloud potenzia le regioni europee con dati a sovranità controllata", desc: "Annunciata la disponibilità di nuovi controlli di residenza dei dati e chiavi di cifratura gestite dal cliente per settori regolamentati.", tags: ["Cloud", "Sovereign", "Google Cloud"]},
+                    {date: "2 Ottobre 2024", title: "Microsoft introduce Copilot Studio per automatizzare i processi aziendali", desc: "La piattaforma low-code permette di creare agenti personalizzati con controlli di sicurezza centralizzati e connettori verso i principali SaaS.", tags: ["Automation", "Microsoft", "AI"]}
+                ],
                 portfolioTitle:"Portfolio",
-                articlesTitle: "Articoli e Paper",
+                portfolioCards: [
+                    {title: "Retail360: piattaforma e-commerce cloud", desc: "Migrazione da monolite legacy a microservizi su AWS, orchestrazione Kubernetes e automazione dei processi di fulfillment. +42% di ordini gestiti senza downtime."},
+                    {title: "SecureOps: mobile app per incident response", desc: "Sviluppo di un’app mobile per incident management con cifratura end-to-end, gestione dei playbook e notifiche push integrate con SIEM aziendale."},
+                    {title: "HelpDesk AI: assistente virtuale omnicanale", desc: "Implementazione di un chatbot con retrieval augmented generation e integrazione CRM. Riduzione del 35% dei tempi medi di risposta del supporto."}
+                ],
+                articlesTitle: "Ultimi articoli",
+                articlesSubtitle: "Scopri articoli su tecnologia, cybersecurity, AI e innovazione",
                 contactTitle: "Contatti",
+                contactSubtitle: "Raccontami la tua sfida: rispondo entro 24 ore con una prima valutazione gratuita.",
                 contactForm: {
                     name: "Il tuo nome",
                     email: "La tua email",
                     message: "Il tuo messaggio",
                     button: "Invia messaggio"
                 },
+                contactPrivacy: "I dati inviati saranno utilizzati solo per rispondere alla tua richiesta, secondo l’informativa privacy.",
                 footer: "&copy; 2025 Michele Siddi. Tutti i diritti riservati."
             },
             en: {
-                heroPayoff: "Turning ideas into digital solutions.",
+                heroPayoff: "Strategy, security and software to scale your digital business.",
                 heroSubtitle: "IT Expert &bull; Software Engineer &bull; Cybersecurity Specialist",
                 ctaContact: '<i class="fa-solid fa-paper-plane"></i> Contact me',
-                nav: ["About", "Services", "News", "Portfolio", "Articles", "Contact"],
-                aboutTitle: "About Me",
-                aboutDesc: `This is my space dedicated to IT and innovation.<br>
-                        Here I share articles, guides and news about technology, with a special focus on Artificial Intelligence.<br>
-                        A meeting point for those who want to understand, learn and stay up to date.<br>
-                        I also offer personalized consulting and technical support for individuals, companies and professionals.<br>
-                        <span style="font-weight:600;">I deal with software development, security, cloud and digital strategies.</span>`,
+                nav: ["About", "Skills", "Services", "Impact", "News", "Portfolio", "Articles", "Contact"],
+                aboutTitle: "About",
+                aboutDesc: `Hi, I’m Michele, an IT consultant based in Cagliari. I help companies turn ideas into secure and scalable digital products, from discovery to delivery.<br>After my first years as a hardware technician I led teams at Amazon, specialising in software engineering, cloud and security.<br>This website is my hub to share knowledge: articles, hands-on guides and updates on how technology can generate real value.`,
+                aboutList: [
+                    "End-to-end approach: discovery, design, engineering, delivery and measurable outcomes.",
+                    "Experience with international projects in e-commerce, automation and applied AI.",
+                    "Ongoing support: tailored training, security governance and cloud cost optimisation."
+                ],
+                skillsTitle: "Core skills",
+                skillsSubtitle: "From strategy to operations, I work side by side with your team throughout the software lifecycle.",
+                skills: [
+                    {title: "Strategy & Discovery", desc: "Workshops, feasibility analysis and roadmaps to turn business goals into tangible digital initiatives.", points: ["Stakeholder and priority mapping", "Shared value proposition & KPIs", "Technical and functional documentation"]},
+                    {title: "Engineering & Delivery", desc: "Full-stack development with modern stacks, cloud infrastructure and DevOps automation for reliable releases.", points: ["Cloud-native architectures", "CI/CD and Infrastructure as Code", "API-first integrations with legacy systems"]},
+                    {title: "Cybersecurity & AI", desc: "Security governance, risk analysis and responsible adoption of generative and predictive AI solutions.", points: ["Threat modelling and remediation plans", "Security assessments and enablement", "Implementation of AI agents and workflows"]}
+                ],
                 servicesTitle: "Services",
+                servicesSubtitle: "Tailor-made solutions to grow safely and sustainably, with clear metrics and aligned teams.",
                 services: [
-                    {title:"Web Development",desc:"Modern, responsive, SEO-optimized sites tailored to your brand and business. High-level digital experiences."},
-                    {title:"App Development",desc:"Mobile & web apps, intuitive and customized for companies and innovative projects."},
-                    {title:"Cybersecurity & IT Consulting",desc:"Defense, assessment, compliance, training and security solutions for companies and professionals."},
-                    {title:"Digital Strategy & Marketing",desc:"Complete strategies: SEO, social, content, automation to grow your business."},
-                    {title:"Strategic Consulting",desc:"Analysis, planning and support for digital transformation and innovation."}
+                    {title:"Web platforms",desc:"Design and build high-performance, accessible and SEO-ready digital products. From UX/UI prototypes to launch."},
+                    {title:"Apps & integrations",desc:"Mobile, backend and API solutions to connect existing services, automate processes and improve user experience."},
+                    {title:"Cybersecurity & compliance",desc:"Security assessments, infrastructure hardening, incident response and training programmes for your team."},
+                    {title:"Growth & marketing tech",desc:"SEO, analytics, content strategy and automation to generate qualified leads and optimise digital investments."},
+                    {title:"Advisory",desc:"Strategic guidance for tech roadmaps, vendor evaluation, governance and change management."}
+                ],
+                highlightsTitle: "Impact in numbers",
+                highlightsSubtitle: "Key metrics that showcase the value delivered in recent projects.",
+                highlights: [
+                    {metric: "10+", label: "years navigating delivery and tech leadership roles"},
+                    {metric: "35", label: "digital projects shipped with tracked KPIs"},
+                    {metric: "98%", label: "customer satisfaction and positive NPS on long-term engagements"},
+                    {metric: "4", label: "active cloud & security certifications"}
                 ],
                 newsTitle: "Tech News",
-                newsSubtitle: "Latest news from the tech world",
+                newsSubtitle: "Latest updates from the digital innovation landscape",
+                newsCards: [
+                    {date: "22 November 2024", title: "EU approves the AI Act, the first comprehensive AI regulation", desc: "The European Parliament has formally adopted the framework introducing transparency, data governance and risk management duties for AI systems.", tags: ["AI Act", "Regulation", "EU"]},
+                    {date: "5 November 2024", title: "NIS2: new guidance helps SMEs raise their security posture", desc: "ENISA released a practical framework to support companies and public sector organisations in meeting the updated network and information security requirements.", tags: ["Cybersecurity", "NIS2", "Governance"]},
+                    {date: "18 October 2024", title: "Google Cloud expands European controls for data sovereignty", desc: "Customers can now rely on additional data residency guardrails and customer-managed encryption keys for highly regulated industries.", tags: ["Cloud", "Sovereign", "Google Cloud"]},
+                    {date: "2 October 2024", title: "Microsoft launches Copilot Studio to automate business workflows", desc: "The low-code platform lets teams build custom copilots with centralised security policies and connectors to major SaaS tools.", tags: ["Automation", "Microsoft", "AI"]}
+                ],
                 portfolioTitle:"Portfolio",
-                articlesTitle: "Articles & Papers",
+                portfolioCards: [
+                    {title: "Retail360: cloud e-commerce platform", desc: "Legacy monolith migration to AWS microservices with Kubernetes orchestration and automated fulfilment. +42% orders handled with zero downtime."},
+                    {title: "SecureOps: incident response mobile app", desc: "Development of a security app with end-to-end encryption, playbook management and push notifications integrated with the corporate SIEM."},
+                    {title: "HelpDesk AI: omnichannel virtual agent", desc: "Chatbot powered by retrieval augmented generation and CRM integration. Average response time reduced by 35%."}
+                ],
+                articlesTitle: "Latest articles",
+                articlesSubtitle: "Explore guides on technology, cybersecurity, AI and innovation",
                 contactTitle: "Contact",
+                contactSubtitle: "Tell me about your challenge: you’ll get a first assessment within 24 hours.",
                 contactForm: {
                     name: "Your name",
                     email: "Your email",
                     message: "Your message",
                     button: "Send message"
                 },
+                contactPrivacy: "Your data will only be used to answer your request, according to the privacy policy.",
                 footer: "&copy; 2025 Michele Siddi. All rights reserved."
             }
         };
         function setLang(lang) {
-            document.getElementById('hero-payoff').innerHTML = translations[lang].heroPayoff;
-            document.getElementById('hero-subtitle').innerHTML = translations[lang].heroSubtitle;
-            document.getElementById('cta-contact').innerHTML = translations[lang].ctaContact;
-            const navIds = ['nav-about','nav-services','nav-news','nav-portfolio','nav-articles','nav-contact'];
-            navIds.forEach((id, i) => { document.getElementById(id).textContent = translations[lang].nav[i]; });
-            document.getElementById('about-title').textContent = translations[lang].aboutTitle;
-            document.getElementById('about-desc').innerHTML = translations[lang].aboutDesc;
-            document.getElementById('services-title').textContent = translations[lang].servicesTitle;
+            const data = translations[lang];
+            document.getElementById('hero-payoff').innerHTML = data.heroPayoff;
+            document.getElementById('hero-subtitle').innerHTML = data.heroSubtitle;
+            document.getElementById('cta-contact').innerHTML = data.ctaContact;
+            const navIds = ['nav-about','nav-skills','nav-services','nav-highlights','nav-news','nav-portfolio','nav-articles','nav-contact'];
+            navIds.forEach((id, i) => { document.getElementById(id).textContent = data.nav[i]; });
+            document.getElementById('about-title').textContent = data.aboutTitle;
+            document.getElementById('about-desc').innerHTML = data.aboutDesc;
+            document.getElementById('about-list').innerHTML = data.aboutList.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('skills-title').textContent = data.skillsTitle;
+            document.getElementById('skills-subtitle').textContent = data.skillsSubtitle;
+            const skillIds = [
+                ['skill-1-title','skill-1-desc','skill-1-list'],
+                ['skill-2-title','skill-2-desc','skill-2-list'],
+                ['skill-3-title','skill-3-desc','skill-3-list']
+            ];
+            skillIds.forEach(([titleId, descId, listId], i) => {
+                document.getElementById(titleId).textContent = data.skills[i].title;
+                document.getElementById(descId).textContent = data.skills[i].desc;
+                document.getElementById(listId).innerHTML = data.skills[i].points.map(point => `<li>${point}</li>`).join('');
+            });
+            document.getElementById('services-title').textContent = data.servicesTitle;
+            document.getElementById('services-subtitle').textContent = data.servicesSubtitle;
             const serviceIds = [['service-web', 'service-web-desc'],['service-app', 'service-app-desc'],['service-cyber', 'service-cyber-desc'],['service-marketing', 'service-marketing-desc'],['service-strategy', 'service-strategy-desc']];
             serviceIds.forEach(([idTitle, idDesc], i) => {
-                document.getElementById(idTitle).textContent = translations[lang].services[i].title;
-                document.getElementById(idDesc).textContent = translations[lang].services[i].desc;
+                document.getElementById(idTitle).textContent = data.services[i].title;
+                document.getElementById(idDesc).textContent = data.services[i].desc;
             });
-            document.getElementById('news-title').textContent = translations[lang].newsTitle;
-            document.getElementById('news-subtitle').textContent = translations[lang].newsSubtitle;
-            document.getElementById('portfolio-title').textContent = translations[lang].portfolioTitle;
-            document.getElementById('articles-title').textContent = translations[lang].articlesTitle;
-            document.getElementById('contact-title').textContent = translations[lang].contactTitle;
+            document.getElementById('highlights-title').textContent = data.highlightsTitle;
+            document.getElementById('highlights-subtitle').textContent = data.highlightsSubtitle;
+            data.highlights.forEach((item, index) => {
+                document.getElementById(`highlight-metric-${index + 1}`).textContent = item.metric;
+                document.getElementById(`highlight-label-${index + 1}`).textContent = item.label;
+            });
+            document.getElementById('news-title').textContent = data.newsTitle;
+            document.getElementById('news-subtitle').textContent = data.newsSubtitle;
+            const newsCards = document.querySelectorAll('.news-card');
+            data.newsCards.forEach((item, i) => {
+                const card = newsCards[i];
+                card.querySelector('.news-date').innerHTML = `<i class="fa-solid fa-calendar"></i> ${item.date}`;
+                card.querySelector('.news-card-title').textContent = item.title;
+                card.querySelector('.news-card-desc').textContent = item.desc;
+                card.querySelector('.news-tags').innerHTML = item.tags.map(tag => `<span class="news-tag">${tag}</span>`).join('');
+            });
+            document.getElementById('portfolio-title').textContent = data.portfolioTitle;
+            const portfolioCards = document.querySelectorAll('.portfolio-card');
+            data.portfolioCards.forEach((item, i) => {
+                const card = portfolioCards[i];
+                card.querySelector('.portfolio-title').textContent = item.title;
+                card.querySelector('.portfolio-desc').textContent = item.desc;
+            });
+            document.getElementById('articles-title').textContent = data.articlesTitle;
+            const articlesSubtitle = document.getElementById('articles-subtitle');
+            if (articlesSubtitle) {
+                articlesSubtitle.textContent = data.articlesSubtitle;
+            }
+            document.getElementById('contact-title').textContent = data.contactTitle;
+            document.getElementById('contact-subtitle').textContent = data.contactSubtitle;
             const contactForm = document.querySelector('.contact-form');
-            contactForm.elements['name'].placeholder = translations[lang].contactForm.name;
-            contactForm.elements['email'].placeholder = translations[lang].contactForm.email;
-            contactForm.elements['message'].placeholder = translations[lang].contactForm.message;
-            contactForm.querySelector('button').innerHTML = `<i class="fa-solid fa-paper-plane"></i> ${translations[lang].contactForm.button}`;
-            document.getElementById('footer-copyright').innerHTML = translations[lang].footer;
+            contactForm.elements['name'].placeholder = data.contactForm.name;
+            contactForm.elements['email'].placeholder = data.contactForm.email;
+            contactForm.elements['message'].placeholder = data.contactForm.message;
+            contactForm.querySelector('button').innerHTML = `<i class="fa-solid fa-paper-plane"></i> ${data.contactForm.button}`;
+            document.getElementById('contact-privacy').textContent = data.contactPrivacy;
+            document.getElementById('footer-copyright').innerHTML = data.footer;
             document.getElementById('lang-it').classList.toggle('active', lang === 'it');
             document.getElementById('lang-en').classList.toggle('active', lang === 'en');
             document.documentElement.lang = lang;
